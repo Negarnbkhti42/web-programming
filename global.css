@@ -1,19 +1,39 @@
 :root {
-    --blue-100: hsl(176, 100%, 50%);
-    --blue-76: hsl(181, 76%, 50%);
     --blue-40: hsl(190, 100%, 40%);
+    --blue-76: hsl(181, 76%, 50%);
+    --blue-100: hsl(176, 100%, 50%);
 
+
+    --violet-15: hsl(270, 100%, 15%);
     --violet-21: hsl(270, 96%, 21%);
     --violet-29: hsl(276, 91%, 29%);
+    --violet-35: hsl(276, 91%, 35%);
 
-    --primary: var(--violet-21);
-    --secondary: var(--violet-29);
+    --primary: var(--violet-35);
+    --secondary: var(--violet-21);
+
+    --primary-hover: var(--violet-29);
 }
 
 @media (prefer-color-scheme: dark) {
-    :root {}
+    :root {
+        --primary: var(--blue-76);
+
+        --primary-hover: var(--blue-40)
+    }
 }
 
 .btn-primary {
     background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.btn-primary:active {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
 }
