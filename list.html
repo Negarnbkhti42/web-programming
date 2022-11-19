@@ -23,15 +23,29 @@
   <body>
     <div class="d-flex flex-column m-3">
       <div class="card w-100">
-        <div class="card-body">
-          <div
-            class="d-flex justify-content-center align-items-center flight-location"
-          >
-            <p class="card-text h4">مبدا: تهران</p>
-            <img src="./assets/flight.svg" class="img-fluid w-20 flight-path" />
-            <p class="card-text h4">مقصد: تهران</p>
+        <div class="card-body d-flex align-items-stretch">
+          <div class="p-2">
+            <a href="#" class="btn btn-primary">خرید</a>
           </div>
-          <a href="#" class="btn btn-primary">خرید</a>
+
+          <div class="p-2 border-end flex-grow-1">
+            <div
+              class="d-flex justify-content-center align-items-center flight-location"
+            >
+              <div class="d-flex flex-column align-items-center">
+                <p class="card-text h5">مبدا: تهران</p>
+                <p class="card-text">11/2/1401</p>
+              </div>
+              <img
+                src="./assets/flight.svg"
+                class="img-fluid w-20 flight-path"
+              />
+              <div class="d-flex flex-column align-items-center">
+                <p class="card-text h5">مقصد: تهران</p>
+                <p class="card-text">11/2/1401</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
