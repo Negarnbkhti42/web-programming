@@ -7,6 +7,11 @@
 }
 
 @media screen and (max-width: 426px) {
+
+    .card-body {
+        flex-direction: column-reverse;
+    }
+
     .flight-location {
         flex-direction: column;
     }
