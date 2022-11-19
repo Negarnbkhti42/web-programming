@@ -1,0 +1,13 @@
+.flight-location {
+    gap: 2rem;
+}
+
+.flight-path {
+    width: 20%;
+}
+
+@media screen and (max-width: 426px) {
+    .flight-location {
+        flex-direction: column;
+    }
+}
