@@ -21,7 +21,43 @@
     <title>جست و جوی بلیط</title>
   </head>
   <body>
-    <div class="d-flex flex-column m-3">
+    <nav class="navbar bg-light">
+      <form class="w-100 row g-2">
+        <div class="form-floating col-md">
+          <select
+            type="text"
+            class="form-select"
+            id="sourceInput"
+            placeholder="مبدا"
+          >
+            <option selected>تهران</option>
+          </select>
+          <label for="sourceInput">مبدا</label>
+        </div>
+
+        <div class="form-floating col-md">
+          <select class="form-select" id="destInput" placeholder="مقصد">
+            <option selected>تهران</option>
+          </select>
+          <label for="destInput">مقصد</label>
+        </div>
+
+        <div class="form-floating col-md">
+          <select
+            type="text"
+            class="form-select"
+            id="sourceInput"
+            placeholder="نوع"
+          >
+            <option selected>economy</option>
+            <option>business</option>
+            <option>first-class</option>
+          </select>
+          <label for="sourceInput">نوع بلیط</label>
+        </div>
+      </form>
+    </nav>
+    <main class="d-flex flex-column m-3">
       <div class="card w-100">
         <div class="card-body d-flex align-items-stretch">
           <div class="p-2">
@@ -50,6 +86,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>
