@@ -33,26 +33,26 @@ export const CITIES = [
 const TICKETS = [];
 
 function filterTicketsBySource(list, source) {
-  return list.filter((ticket) => ticket.source == source);
+  return list.filter((ticket) => ticket.source === source);
 }
 
 function filterTicketsByDestination(list, dest) {
-  return list.filter((ticket) => ticket.destination == dest);
+  return list.filter((ticket) => ticket.destination === dest);
 }
 
 function filterTicketsByClass(list, classes) {
   return list.filter((ticket) => classes.includes(ticket.class));
 }
 
-function filterTicketsByPrice(list, maxPrice) {
-  return list.filter((ticket) => ticket.price <= maxPrice);
+function filterTicketsByDate(list, date) {
+  return list.filter((ticket) => ticket.date.getTime() === date.getTime());
 }
 
-function filterTickets({ source, dest, classes, maxPrice }) {
+export function filterTickets({ source, dest, classes, date }) {
   let filteredTickets = filterTicketsBySource(TICKETS, source);
   filteredTickets = filterTicketsByDestination(filteredTickets, dest);
   filteredTickets = filterTicketsByClass(filteredTickets, classes);
-  filteredTickets = filterTicketsByPrice(filteredTickets, maxPrice);
+  filteredTickets = filterTicketsByDate(filteredTickets, date);
 
   return filteredTickets;
 }
