@@ -28,6 +28,7 @@
             type="text"
             class="form-select"
             id="sourceInput"
+            name="source"
             placeholder="مبدا"
           >
             <option selected>تهران</option>
@@ -36,25 +37,43 @@
         </div>
 
         <div class="form-floating col-md">
-          <select class="form-select" id="destInput" placeholder="مقصد">
+          <select
+            class="form-select"
+            id="destInput"
+            name="dest"
+            placeholder="مقصد"
+          >
             <option selected>تهران</option>
           </select>
           <label for="destInput">مقصد</label>
         </div>
 
         <div class="form-floating col-md">
-          <select
-            type="text"
-            class="form-select"
-            id="sourceInput"
-            placeholder="نوع"
-          >
-            <option selected>economy</option>
-            <option>business</option>
-            <option>first-class</option>
-          </select>
-          <label for="sourceInput">نوع بلیط</label>
+          <input
+            type="date"
+            class="form-control"
+            id="date"
+            name="date"
+            placeholder="تاریخ"
+          />
+          <label for="date">تاریخ</label>
         </div>
+
+        <div class="form-floating col-md">
+          <input
+            type="number"
+            class="form-control"
+            id="passenger"
+            name="passenger"
+            placeholder="تعداد مسافر"
+          />
+          <label for="passenger">تعداد مسافر</label>
+        </div>
+        <input
+          class="col-sm form-control btn btn-secondary"
+          type="submit"
+          value="ویرایش جست و جو"
+        />
       </form>
     </nav>
     <main class="d-flex flex-column m-3">
