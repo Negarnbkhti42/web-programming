@@ -1,3 +1,8 @@
+export const SOURCE_PARAM = "source";
+export const DEST_PARAM = "dest";
+export const DATE_PARAM = "date";
+export const PASSENGER_PARAM = "passenger";
+
 export const CITIES = [
   "تهران",
   "شیراز",
