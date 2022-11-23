@@ -37,3 +37,17 @@
     background-color: var(--primary) !important;
     border-color: var(--primary) !important;
 }
+
+.fill-primary {
+    color: #fff;
+    background-color: var(--primary);
+}
+
+.plane {
+    padding: 0.5rem 0.3rem 0.5rem 0.5rem;
+    border-radius: 50%;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
