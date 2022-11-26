@@ -28,13 +28,85 @@
   </head>
   <body>
     <main class="d-flex flex-column align-items-stretch mx-3">
-      <div class="d-flex align-items-center">
+      <section class="d-flex align-items-center">
         <i class="fa-solid fa-plane fa-2x rotated plane fill-primary"></i>
         <div class="pe-4">
           <p class="mb-1">2 مهر 1401</p>
           <p class="h5">تهران-تهران</p>
         </div>
-      </div>
+      </section>
+      <section>
+        <button
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          اضافه کردن مسافر
+          <i class="fa-solid fa-plus"></i>
+        </button>
+
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  اطلاعات مسافر
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close m-0"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="passengerName"
+                      placeholder="نام و نام خانوادگی"
+                      required
+                    />
+                    <label for="passengerName">نام و نام خانوادگی</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      pattern="[A-Z]\d{8}"
+                      id="passportNo"
+                      placeholder="شماره پاسپورت"
+                      required
+                    />
+                    <label for="passportNo">شماره پاسپورت</label>
+                    <div class="invalid-feedback">شماره پاسپورت معتبر نیست</div>
+                  </div>
+                  <div class="modal-footer justify-content-start">
+                    <button type="submit" class="btn btn-primary">
+                      اضافه کردن مسافر
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      لغو
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
