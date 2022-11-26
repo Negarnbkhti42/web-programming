@@ -23,7 +23,7 @@
       src="https://kit.fontawesome.com/2c02c3225a.js"
       crossorigin="anonymous"
     ></script>
-    <script defer src="./scripts/listScript.js"></script>
+    <script defer src="./scripts/CheckoutScript.js"></script>
     <title>پرداخت</title>
   </head>
   <body>
@@ -66,7 +66,7 @@
                 ></button>
               </div>
               <div class="modal-body">
-                <form>
+                <form id="passengerForm" novalidate>
                   <div class="form-floating mb-3">
                     <input
                       type="text"
@@ -76,6 +76,9 @@
                       required
                     />
                     <label for="passengerName">نام و نام خانوادگی</label>
+                    <div class="invalid-feedback">
+                      پر کردن این فیلد الزامی است
+                    </div>
                   </div>
                   <div class="form-floating mb-3">
                     <input
