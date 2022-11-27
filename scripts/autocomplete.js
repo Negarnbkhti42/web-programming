@@ -6,8 +6,13 @@ function showOptions(event, optionField) {
   const filteredCities = CITIES.filter((city) => city.includes(value));
 
   filteredCities.forEach((city) => {
-    const option = document.createElement("div");
+    const option = document.createElement("li");
+    option.classList.add("list-group-item");
     option.innerHTML = city;
+    option.addEventListener("click", () => {
+      this.value = city;
+      optionField.hidden = true;
+    });
     optionField.appendChild(option);
   });
 }
@@ -18,14 +23,13 @@ AUTOCOMPLETES.forEach((autocomplete) => {
   const input = autocomplete.querySelector("input");
   const optionField = autocomplete.querySelector(".options");
 
+  const displayOptions = showOptions.bind(input);
+
   input.addEventListener("focus", function (e) {
-    showOptions(e, optionField);
+    displayOptions(e, optionField);
   });
 
   input.addEventListener("input", function (e) {
-    showOptions(e, optionField);
-  });
-  input.addEventListener("blur", function () {
-    optionField.hidden = true;
+    displayOptions(e, optionField);
   });
 });

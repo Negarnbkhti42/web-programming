@@ -22,6 +22,7 @@
     --secondary-hover: var(--blue-45);
 
     --background: var(--white);
+    --content-background: #f8f9fa;
     --font-color: #000;
     --secondary-color: #fff;
 }
@@ -86,4 +87,19 @@ p {
 .btn-secondary:active {
     background-color: var(--secondary) !important;
     border-color: var(--secondary) !important;
+}
+
+.autocomplete {
+    position: relative;
+}
+
+.autocomplete .options {
+    position: absolute;
+    top: 100%;
+    width: 15rem;
+    max-height: 30rem;
+    overflow-y: auto;
+
+
+    z-index: 20;
 }
