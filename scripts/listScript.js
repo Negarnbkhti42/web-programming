@@ -1,10 +1,3 @@
-import {
-  DATE_PARAM,
-  DEST_PARAM,
-  PASSENGER_PARAM,
-  SOURCE_PARAM,
-} from "../utils";
-
 function getSearchInfo() {
   let params = new URLSearchParams(document.location.search);
   return {

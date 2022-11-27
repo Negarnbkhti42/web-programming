@@ -24,35 +24,36 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <script defer src="./scripts/listScript.js"></script>
+    <script src="./scripts/utils.js" defer></script>
+    <script src="./scripts/listScript.js" defer></script>
+    <script src="./scripts/autocomplete.js" defer></script>
     <title>جست و جوی بلیط</title>
   </head>
   <body>
     <nav class="navbar bg-light theme-dependant">
       <form class="w-100 row g-2">
-        <div class="form-floating col-md">
-          <select
+        <div class="form-floating col-md autocomplete">
+          <input
             type="text"
-            class="form-select"
+            class="form-control"
             id="sourceInput"
             name="source"
             placeholder="مبدا"
-          >
-            <option selected>تهران</option>
-          </select>
+          />
           <label for="sourceInput">مبدا</label>
+          <div class="options" hidden></div>
         </div>
 
-        <div class="form-floating col-md">
-          <select
-            class="form-select"
+        <div class="form-floating col-md autocomplete">
+          <input
+            class="form-control"
+            type="text"
             id="destInput"
             name="dest"
             placeholder="مقصد"
-          >
-            <option selected>تهران</option>
-          </select>
+          />
           <label for="destInput">مقصد</label>
+          <div class="options" hidden></div>
         </div>
 
         <div class="form-floating col-md">

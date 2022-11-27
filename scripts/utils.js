@@ -1,9 +1,9 @@
-export const SOURCE_PARAM = "source";
-export const DEST_PARAM = "dest";
-export const DATE_PARAM = "date";
-export const PASSENGER_PARAM = "passenger";
+const SOURCE_PARAM = "source";
+const DEST_PARAM = "dest";
+const DATE_PARAM = "date";
+const PASSENGER_PARAM = "passenger";
 
-export const CITIES = [
+const CITIES = [
   "تهران",
   "شیراز",
   "اصفهان",
@@ -35,7 +35,7 @@ export const CITIES = [
   "کرمانشاه",
 ];
 
-export const tickets = [
+const tickets = [
   {
     source: "اهواز",
     destination: "سنندج",
