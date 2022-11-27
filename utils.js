@@ -1,4 +1,4 @@
-export const CITIES = [
+const CITIES = [
   "تهران",
   "شیراز",
   "اصفهان",
