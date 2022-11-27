@@ -14,5 +14,6 @@
 
     .flight-location {
         flex-direction: column;
+        align-items: center !important;
     }
 }

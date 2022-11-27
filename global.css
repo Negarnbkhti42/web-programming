@@ -10,26 +10,56 @@
     --violet-29: hsl(276, 91%, 29%);
     --violet-35: hsl(276, 91%, 35%);
 
+    --white: hsl(0, 100%, 100%);
+
+    --black-5: hsl(260, 5%, 13%);
+    --black-4: hsl(270, 4%, 18%);
+
     --primary: var(--violet-35);
     --secondary: var(--blue-40);
 
     --primary-hover: var(--violet-29);
     --secondary-hover: var(--blue-45);
+
+    --background: var(--white);
+    --font-color: #000;
+    --secondary-color: #fff;
 }
 
-@media (prefer-color-scheme: dark) {
+
+
+@media (prefers-color-scheme: dark) {
     :root {
         --primary: var(--blue-76);
         --secondary: var(--violet-29);
 
         --primary-hover: var(--blue-40);
-        --secondary-hover: var(var(--violet-35))
+        --secondary-hover: var(var(--violet-35));
+
+        --background: var(--black-5);
+        --content-background: var(--black-4);
+        --font-color: #fff;
+        --secondary-color: #000;
     }
+}
+
+body {
+    background-color: var(--background);
+    color: var(--font-color);
+}
+
+.theme-dependant {
+    background-color: var(--content-background) !important;
+}
+
+p {
+    margin-bottom: 0;
 }
 
 .btn-primary {
     background-color: var(--primary);
     border-color: var(--primary);
+    color: var(--secondary-color);
 }
 
 .btn-primary:hover {
@@ -45,6 +75,7 @@
 .btn-secondary {
     background-color: var(--secondary);
     border-color: var(--secondary);
+
 }
 
 .btn-secondary:hover {
