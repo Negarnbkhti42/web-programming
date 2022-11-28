@@ -18,10 +18,13 @@ function showOptions(event, optionField) {
 }
 
 const AUTOCOMPLETES = document.querySelectorAll(".autocomplete");
+const OPTION_FIELDS = [];
 
 AUTOCOMPLETES.forEach((autocomplete) => {
   const input = autocomplete.querySelector("input");
   const optionField = autocomplete.querySelector(".options");
+
+  OPTION_FIELDS.push(autocomplete);
 
   const displayOptions = showOptions.bind(input);
 
@@ -31,5 +34,20 @@ AUTOCOMPLETES.forEach((autocomplete) => {
 
   input.addEventListener("input", function (e) {
     displayOptions(e, optionField);
+  });
+});
+
+document.addEventListener("click", function (event) {
+  OPTION_FIELDS.forEach((option) => {
+    const list = option.querySelector(".options");
+    if (
+      !(
+        list.hidden ||
+        list.contains(event.target) ||
+        option.contains(event.target)
+      )
+    ) {
+      list.hidden = true;
+    }
   });
 });
