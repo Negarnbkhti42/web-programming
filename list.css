@@ -6,14 +6,9 @@
     width: 40%;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 769px) {
 
-    .card-body {
+    .ticket {
         flex-direction: column-reverse;
-    }
-
-    .flight-location {
-        flex-direction: column;
-        align-items: center !important;
     }
 }
