@@ -1237,3 +1237,26 @@ const tickets = [
     duration: "24 دقیقه",
   },
 ];
+
+function filterTicketsBySource(list, source) {}
+
+function filterTicketsByDestination(list, dest) {
+  return list.filter((ticket) => ticket.destination === dest);
+}
+
+function filterTicketsByClass(list, classes) {
+  return list.filter((ticket) => classes.includes(ticket.class));
+}
+
+function filterTicketsByDate(list, date) {
+  return list.filter((ticket) => ticket.date.getTime() === date.getTime());
+}
+
+export function filterTickets({ source, dest, classes, date }) {
+  let filteredTickets = filterTicketsBySource(TICKETS, source);
+  filteredTickets = filterTicketsByDestination(filteredTickets, dest);
+  filteredTickets = filterTicketsByClass(filteredTickets, classes);
+  filteredTickets = filterTicketsByDate(filteredTickets, date);
+
+  return filteredTickets;
+}
