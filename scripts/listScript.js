@@ -4,10 +4,10 @@ function getSearchInfo() {
   console.log("searching...");
   let params = new URLSearchParams(document.location.search);
   return {
-    source: params.get(SOURCE_PARAM),
-    dest: params.get(DEST_PARAM),
+    source: params.get(SOURCE_PARAM) || "",
+    dest: params.get(DEST_PARAM) || "",
     date: new Date(params.get(DATE_PARAM) || ""),
-    passengers: params.get(PASSENGER_PARAM),
+    passengers: params.get(PASSENGER_PARAM) || 0,
   };
 }
 
@@ -51,7 +51,11 @@ function displayTickets(searchParams) {
       </div>
       <div class="border-top d-flex align-items-end">
         ظرفیت باقی مانده: ${ticket.flight_capacity} نفر
-        <span class="badge text-bg-danger ms-2">ظرفیت محدود</span>
+        ${
+          ticket.flight_capacity < 3 * searchParams.passengers
+            ? '<span class="badge text-bg-danger ms-2">ظرفیت محدود</span>'
+            : ""
+        }
       </div>
     </div>
   </div>`;

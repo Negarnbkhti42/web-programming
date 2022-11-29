@@ -110,7 +110,8 @@ p {
 .autocomplete .options {
     position: absolute;
     top: 100%;
-    width: 15rem;
+    inset-inline-start: 0;
+    /* width: 15rem; */
     max-height: 30rem;
     overflow-y: auto;
 
