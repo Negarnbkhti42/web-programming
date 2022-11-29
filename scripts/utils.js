@@ -35,7 +35,7 @@ const CITIES = [
   "کرمانشاه",
 ];
 
-const tickets = [
+const TICKETS = [
   {
     source: "تهران",
     destination: "بابل",
@@ -1238,21 +1238,25 @@ const tickets = [
   },
 ];
 
-function filterTicketsBySource(list, source) {}
+function filterTicketsBySource(list, source) {
+  return list.filter((ticket) => ticket.source === source);
+}
 
 function filterTicketsByDestination(list, dest) {
   return list.filter((ticket) => ticket.destination === dest);
 }
 
-function filterTicketsByClass(list, classes) {
-  return list.filter((ticket) => classes.includes(ticket.class));
+function filterTicketsByClass(list, ticket_class) {
+  return list.filter((ticket) => ticket_class === ticket.class);
 }
 
 function filterTicketsByDate(list, date) {
-  return list.filter((ticket) => ticket.date.getTime() === date.getTime());
+  return list.filter(
+    (ticket) => new Date(ticket.start_date).getTime() === date.getTime()
+  );
 }
 
-export function filterTickets({ source, dest, classes, date }) {
+function filterTickets({ source, dest, classes, date }) {
   let filteredTickets = filterTicketsBySource(TICKETS, source);
   filteredTickets = filterTicketsByDestination(filteredTickets, dest);
   filteredTickets = filterTicketsByClass(filteredTickets, classes);

@@ -2,6 +2,10 @@
     gap: 2rem;
 }
 
+.flight-duration {
+    border-bottom: 0.1rem solid var(--border-color);
+}
+
 .flight-path {
     width: 40%;
 }

@@ -15,9 +15,11 @@
     --violet-50: hsl(276, 91%, 50%);
 
     --white: hsl(0, 100%, 100%);
+    --white-18: hsl(282, 10%, 80%);
 
-    --black-5: hsl(260, 5%, 13%);
-    --black-4: hsl(270, 4%, 18%);
+    --black-13: hsl(260, 5%, 13%);
+    --black-14: hsl(210, 14%, 89%);
+    --black-26: hsl(270, 5%, 26%);
 
     --primary: var(--violet-35);
     --secondary: var(--blue-40);
@@ -29,27 +31,32 @@
     --content-background: #f8f9fa;
     --font-color: #000;
     --secondary-color: #fff;
+
+    --border-color: var(--black-14);
+
+
 }
-
-* {
-    box-sizing: border-box;
-}
-
-
 
 @media (prefers-color-scheme: dark) {
     :root {
         --primary: var(--blue-45);
-        --secondary: var(--violet-29);
+        --secondary: var(--violet-35);
 
         --primary-hover: var(--blue-55);
-        --secondary-hover: var(--violet-35);
+        --secondary-hover: var(--violet-40);
 
-        --background: var(--black-5);
-        --content-background: var(--black-4);
+        --background: var(--black-13);
+        --content-background: var(--black-26);
         --font-color: #fff;
         --secondary-color: #000;
+
+        --border-color: var(--white-18);
     }
+}
+
+* {
+    box-sizing: border-box;
+    border-color: var(--white-18);
 }
 
 body {
@@ -68,38 +75,32 @@ p {
 .btn-primary {
     background-color: var(--primary);
     border-color: var(--primary);
-    color: var(--secondary-color);
 }
 
 .btn-primary:hover {
     background-color: var(--primary-hover);
     border-color: var(--primary-hover);
-    color: var(--secondary-color);
 }
 
 .btn-primary:active {
     background-color: var(--primary) !important;
     border-color: var(--primary) !important;
-    color: var(--secondary-color) !important;
 }
 
 .btn-secondary {
     background-color: var(--secondary);
     border-color: var(--secondary);
-    color: var(--font-color);
 
 }
 
 .btn-secondary:hover {
     background-color: var(--secondary-hover);
     border-color: var(--secondary-hover);
-    color: var(--font-color);
 }
 
 .btn-secondary:active {
     background-color: var(--secondary) !important;
     border-color: var(--secondary) !important;
-    color: var(--font-color) !important;
 }
 
 .autocomplete {
