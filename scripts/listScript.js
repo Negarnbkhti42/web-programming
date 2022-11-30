@@ -1,14 +1,24 @@
 const ticketContainer = document.getElementById("ticketList");
+const sourceInput = document.getElementsByName("source")[0];
+const destInput = document.getElementsByName("dest")[0];
+const dateInput = document.getElementsByName("date")[0];
+const passengerInput = document.getElementsByName("passenger")[0];
 
 function getSearchInfo() {
-  console.log("searching...");
   let params = new URLSearchParams(document.location.search);
   return {
     source: params.get(SOURCE_PARAM) || "",
     dest: params.get(DEST_PARAM) || "",
-    date: new Date(params.get(DATE_PARAM) || ""),
+    date: params.get(DATE_PARAM) || "",
     passengers: params.get(PASSENGER_PARAM) || 0,
   };
+}
+
+function setInputs(searchParams) {
+  sourceInput.value = searchParams.source;
+  destInput.value = searchParams.dest;
+  dateInput.value = searchParams.date;
+  passengerInput.value = searchParams.passengers;
 }
 
 function displayTickets(searchParams) {
@@ -21,9 +31,11 @@ function displayTickets(searchParams) {
     <div class="card-body d-flex flex-column">
       <div class="d-flex align-items-stretch ticket">
         <div class="p-2">
-          <a href="#" class="btn btn-primary w-100">
-            <p>
-              <span class="badge text-bg-warning">${ticket.class}</span>
+          <a href="#" class="btn btn-primary price-badge">
+          <span class="badge text-bg-${CLASS_COLORS[ticket.class]}">${
+      ticket.class
+    }</span>
+                <p>
               ${ticket.price} تومان
             </p>
           </a>
@@ -63,5 +75,5 @@ function displayTickets(searchParams) {
 }
 
 let searchParams = getSearchInfo();
-console.log(searchParams);
+setInputs(searchParams);
 displayTickets(searchParams);

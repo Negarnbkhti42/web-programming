@@ -1238,6 +1238,12 @@ const TICKETS = [
   },
 ];
 
+const CLASS_COLORS = {
+  اکونومی: "warning",
+  بیزنس: "info",
+  "فرست کلاس": "success",
+};
+
 function filterTicketsBySource(list, source) {
   if (!source) {
     return list;
@@ -1260,6 +1266,7 @@ function filterTicketsByClass(list, ticket_class) {
 }
 
 function filterTicketsByDate(list, date) {
+  date = new Date(date);
   if (!date.getDate()) {
     return list;
   }
@@ -1268,11 +1275,16 @@ function filterTicketsByDate(list, date) {
   );
 }
 
-function filterTickets({ source, dest, classes, date }) {
+function filterTicketsByPassenger(list, passenger) {
+  return list.filter((ticket) => ticket.flight_capacity >= passenger);
+}
+
+function filterTickets({ source, dest, classes, date, passengers }) {
   let filteredTickets = filterTicketsBySource(TICKETS, source);
   filteredTickets = filterTicketsByDestination(filteredTickets, dest);
   filteredTickets = filterTicketsByClass(filteredTickets, classes);
   filteredTickets = filterTicketsByDate(filteredTickets, date);
+  filterTickets = filterTicketsByPassenger(filteredTickets, passengers);
 
   return filteredTickets;
 }

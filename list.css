@@ -10,6 +10,13 @@
     width: 40%;
 }
 
+.price-badge {
+    width: 15rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
 @media screen and (max-width: 769px) {
 
     .ticket {

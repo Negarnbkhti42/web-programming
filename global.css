@@ -13,6 +13,7 @@
     --violet-35: hsl(276, 91%, 35%);
     --violet-40: hsl(276, 91%, 40%);
     --violet-50: hsl(276, 91%, 50%);
+    --violet-60: hsl(276, 91%, 60%);
 
     --white: hsl(0, 100%, 100%);
     --white-18: hsl(282, 10%, 80%);
@@ -40,10 +41,10 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --primary: var(--blue-45);
-        --secondary: var(--violet-35);
+        --secondary: var(--violet-50);
 
         --primary-hover: var(--blue-55);
-        --secondary-hover: var(--violet-40);
+        --secondary-hover: var(--violet-60);
 
         --background: var(--black-13);
         --content-background: var(--black-26);
@@ -70,6 +71,11 @@ body {
 
 p {
     margin-bottom: 0;
+}
+
+input {
+    background-color: var(--background) !important;
+    color: var(--font-color) !important;
 }
 
 .btn-primary {
