@@ -4,7 +4,7 @@
     margin-left: 20px;
 }
 
-.before-buying , .insurance , .location ,.compensation ,.treatment{
+.before-buying , .insurance , .location ,.compensation ,.treatment , .ages{
     display: flex;
     flex-direction: row;
 }
@@ -37,4 +37,11 @@ h2{
     width: 310px;
     height: 310px;
     margin-left: 20px;
+    margin-top: -10px;
+}
+
+.age{
+    width: 210px;
+    height: 210px;
+    margin-top: -30px;
 }
