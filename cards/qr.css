@@ -1,0 +1,48 @@
+.qr-code {
+    width: 400px;
+    height: 400px;
+}
+
+.img-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.all-companies {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 10%;
+    margin-right: 15px;
+}
+
+.all-text {
+    margin-left: 200px;
+}
+
+
+.h3 {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 220px;
+}
+
+.all-companies {
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+}
