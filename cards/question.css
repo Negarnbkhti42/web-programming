@@ -1,47 +1,51 @@
-.baggage , .animal , .money , .luxury , .wheelchair , .information{
+section {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.baggage, .animal, .money, .luxury, .wheelchair, .information {
     display: flex;
     flex-direction: row;
     margin-right: 10px;
     margin-left: 10px;
 }
 
-h2{
+h2 {
     color: #5D0896;
 }
 
-.bag{
+.bag {
     width: 200px;
     height: 200px;
-   margin-left: 20px;
+    margin-left: 20px;
     margin-right: 20px;
 }
 
-.dog{
+.dog {
     width: 170px;
     height: 170px;
     margin-left: 20px;
     margin-top: -20px;
 }
 
-.money-img{
+.money-img {
     width: 240px;
     height: 240px;
 }
 
-.lux{
+.lux {
     width: 230px;
     height: 230px;
-    padding-top:-40px ;
+    padding-top: -40px;
 }
 
-.wheel{
+.wheel {
     width: 220px;
     height: 220px;
     margin-top: -40px;
-
 }
 
-.info{
+.info {
     width: 200px;
     height: 200px;
     margin-top: -40px;
