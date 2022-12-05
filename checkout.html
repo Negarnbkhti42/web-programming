@@ -11,7 +11,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./list.css" />
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -56,6 +55,119 @@
           </div>
         </div>
       </div>
+      <section id="firstPassenger">
+        <form id="firstPassengerForm" novalidate>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="passengerName"
+              placeholder="نام و نام خانوادگی"
+              name="name"
+              required
+            />
+            <label for="passengerName">نام و نام خانوادگی</label>
+            <div class="invalid-feedback">پر کردن این فیلد الزامی است</div>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              pattern="[A-Z]\d{8}"
+              id="passportNo"
+              name="passportNo"
+              placeholder="شماره پاسپورت"
+              required
+            />
+            <label for="passportNo">شماره پاسپورت</label>
+            <div class="invalid-feedback">
+              شماره پاسپورت باید شامال یک حرف بزرگ انگلیسی و 8 رقم باشد
+            </div>
+          </div>
+          <div class="modal-footer justify-content-start">
+            <button type="submit" class="btn btn-primary">ثبت اطلاعات</button>
+          </div>
+        </form>
+      </section>
+      <section id="extraPassenger" hidden>
+        <button
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          اضافه کردن مسافر
+          <i class="fa-solid fa-plus"></i>
+        </button>
+
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  اطلاعات مسافر
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close m-0"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form id="passengerForm" novalidate>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="passengerName"
+                      name="name"
+                      placeholder="نام و نام خانوادگی"
+                      required
+                    />
+                    <label for="passengerName">نام و نام خانوادگی</label>
+                    <div class="invalid-feedback">
+                      پر کردن این فیلد الزامی است
+                    </div>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      pattern="[A-Z]\d{8}"
+                      id="passportNo"
+                      name="passportNo"
+                      placeholder="شماره پاسپورت"
+                      required
+                    />
+                    <label for="passportNo">شماره پاسپورت</label>
+                    <div class="invalid-feedback">
+                      شماره پاسپورت باید شامال یک حرف بزرگ انگلیسی و 8 رقم باشد
+                    </div>
+                  </div>
+                  <div class="modal-footer justify-content-start">
+                    <button type="submit" class="btn btn-primary">
+                      اضافه کردن مسافر
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      لغو
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
