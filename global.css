@@ -1,6 +1,9 @@
 :root {
     --blue-40: hsl(190, 100%, 40%);
-    --blue-76: hsl(181, 76%, 50%);
+    --blue-45: hsl(190, 100%, 45%);
+    --blue-55: hsl(190, 100%, 55%);
+    --blue-70: hsl(190, 100%, 70%);
+    --blue-76: hsl(181, 76%, 70%);
     --blue-100: hsl(176, 100%, 50%);
 
 
@@ -8,19 +11,73 @@
     --violet-21: hsl(270, 96%, 21%);
     --violet-29: hsl(276, 91%, 29%);
     --violet-35: hsl(276, 91%, 35%);
+    --violet-40: hsl(276, 91%, 40%);
+    --violet-50: hsl(276, 91%, 50%);
+    --violet-60: hsl(276, 91%, 60%);
+
+    --white: hsl(0, 100%, 100%);
+    --white-18: hsl(282, 10%, 80%);
+
+    --black-13: hsl(260, 5%, 13%);
+    --black-14: hsl(210, 14%, 89%);
+    --black-26: hsl(270, 5%, 26%);
 
     --primary: var(--violet-35);
-    --secondary: var(--violet-21);
+    --secondary: var(--blue-40);
 
     --primary-hover: var(--violet-29);
+    --secondary-hover: var(--blue-45);
+
+    --background: var(--white);
+    --content-background: #f8f9fa;
+    --font-color: #000;
+    --secondary-color: #fff;
+
+    --border-color: var(--black-14);
+
+
 }
 
-@media (prefer-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
-        --primary: var(--blue-76);
+        --primary: var(--blue-45);
+        --secondary: var(--violet-50);
 
-        --primary-hover: var(--blue-40)
+        --primary-hover: var(--blue-55);
+        --secondary-hover: var(--violet-60);
+
+        --background: var(--black-13);
+        --content-background: var(--black-26);
+        --font-color: #fff;
+        --secondary-color: #000;
+
+        --border-color: var(--white-18);
     }
+}
+
+* {
+    box-sizing: border-box;
+    border-color: var(--white-18);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--font-color);
+
+    font-family: Vazirmatn, sans-serif;
+}
+
+.theme-dependant {
+    background-color: var(--content-background) !important;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+input {
+    background-color: var(--background) !important;
+    color: var(--font-color) !important;
 }
 
 .btn-primary {
@@ -38,22 +95,34 @@
     border-color: var(--primary) !important;
 }
 
-.fill-primary {
-    color: #fff;
-    background-color: var(--primary);
+.btn-secondary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+
 }
 
-.plane {
-    padding: 0.5rem 0.3rem 0.5rem 0.5rem;
-    border-radius: 50%;
+.btn-secondary:hover {
+    background-color: var(--secondary-hover);
+    border-color: var(--secondary-hover);
 }
 
-.rotated {
-    transform: rotate(180deg);
+.btn-secondary:active {
+    background-color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
 }
 
-.form-control.is-invalid,
-.was-validated .form-control:invalid {
-    background-image: none;
+.autocomplete {
+    position: relative;
+}
 
+.autocomplete .options {
+    position: absolute;
+    top: 100%;
+    inset-inline-start: 0;
+    /* width: 15rem; */
+    max-height: 30rem;
+    overflow-y: auto;
+
+
+    z-index: 20;
 }
