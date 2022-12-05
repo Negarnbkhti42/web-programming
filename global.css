@@ -14,6 +14,10 @@
     :root {}
 }
 
+body {
+    font-family: 'vazirmatn' sans-serif;
+}
+
 .btn-primary {
     background-color: var(--primary);
 }
