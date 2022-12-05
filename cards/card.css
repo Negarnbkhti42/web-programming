@@ -28,6 +28,10 @@
     box-shadow: 1.5px 0 5px 1px rgba(90, 55, 105, 0.53);
 }
 
+.pp1 {
+    margin-right: 60px;
+}
+
 
 .plans {
     display: flex;
@@ -66,7 +70,7 @@
     align-items: center;
 }
 
-.aircrafts{
+.aircrafts {
     margin-top: 150px;
     display: flex;
     flex-direction: column;
@@ -75,35 +79,39 @@
     width: 100vw;
     background-color: #efe4ff;
 }
-.title-h2{
+
+.title-h2 {
     margin-top: 20px;
     margin-bottom: 50px;
 }
 
-.aircraft{
+.aircraft {
     display: flex;
     flex-direction: row;
     margin-left: 50px;
     margin-right: 50px;
 }
 
-
-
-h3{
+h3 {
     color: #5D0896;
 }
 
-.plane-img{
+.plane-img {
     width: 120px;
     height: 120px;
     margin-top: -20px;
 }
 
-.plane-img1{
+.plane-img1 {
     width: 110px;
     height: 110px;
     margin-top: -20px;
 }
+
+.line {
+    border-bottom: #5D0896 20px solid;
+}
+
 
 @media screen and (max-width: 1200px) {
     .page-link {
