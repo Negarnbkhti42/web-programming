@@ -31,7 +31,7 @@
     margin-top: 10px;
 }
 
-.qr-code:hover{
+.qr-code:hover {
     width: 460px;
     height: 460px;
 }
@@ -43,7 +43,7 @@
 
 .h3 {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     margin-right: 220px;
     color: #5D0896;
 }
@@ -55,6 +55,33 @@
     border-left: #5D0896 solid 3px;
 }
 
-h1{
+h1 {
     color: #5D0896;
 }
+
+
+@media screen  and (max-width: 990px) {
+    .qr-code {
+        margin-bottom: 150px;
+    }
+
+    .all-companies {
+        margin-left: 10px;
+    }
+
+    h3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 650px;
+    }
+
+    .logo {
+        width: 85px;
+        height: 85px;
+    }
+}
+
+
+
+
