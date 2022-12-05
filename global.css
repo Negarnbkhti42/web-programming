@@ -63,6 +63,8 @@
 body {
     background-color: var(--background);
     color: var(--font-color);
+
+    font-family: Vazirmatn, sans-serif;
 }
 
 .theme-dependant {
