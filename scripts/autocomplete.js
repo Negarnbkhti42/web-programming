@@ -5,7 +5,7 @@ function showOptions(event, optionField) {
 
   const filteredCities = CITIES.filter((city) => city.includes(value));
 
-  filteredCities.forEach((city) => {
+  filteredCities.slice(0, 5).forEach((city) => {
     const option = document.createElement("li");
     option.classList.add("list-group-item");
     option.innerHTML = city;
