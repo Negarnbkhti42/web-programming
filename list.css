@@ -17,6 +17,11 @@
     justify-content: space-between;
 }
 
+.ticket-container {
+    background-color: rgb(225, 182, 237);
+}
+
+
 @media screen and (max-width: 769px) {
 
     .ticket {

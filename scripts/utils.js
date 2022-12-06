@@ -5,12 +5,12 @@ const PASSENGER_PARAM = "passenger";
 
 const TICKET_STRUCTURE = (
   ticket
-) => `<div class="card w-100 theme-dependant mb-5">
+) => `<div class="card w-100 mb-2 theme-dependant ticket-container">
 <div class="card-body d-flex flex-column">
   <div class="d-flex align-items-stretch ticket">
     <div class="p-2">
       <a href="#" class="btn btn-primary price-badge">
-      <span class="badge text-bg-${CLASS_COLORS[ticket.class]}">${
+      <span class="badge text-bg-${CLASS_COLORS["اکونومی"]}">${
   ticket.class
 }</span>
             <p>

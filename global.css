@@ -14,6 +14,9 @@
     --violet-40: hsl(276, 91%, 40%);
     --violet-50: hsl(276, 91%, 50%);
     --violet-60: hsl(276, 91%, 60%);
+    --violet-70: hsl(276, 91%, 70%);
+    --violet-75: hsl(276, 91%, 75%);
+    --violet-100-88: hsl(276, 100%, 84%);
 
     --white: hsl(0, 100%, 100%);
     --white-18: hsl(282, 10%, 80%);
@@ -40,10 +43,10 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --primary: var(--blue-45);
+        --primary: var(--violet-60);
         --secondary: var(--violet-50);
 
-        --primary-hover: var(--blue-55);
+        --primary-hover: var(--violet-70);
         --secondary-hover: var(--violet-60);
 
         --background: var(--black-13);
@@ -125,4 +128,8 @@ input {
 
 
     z-index: 20;
+}
+
+.badge {
+    background-color: var(--violet-100-88) !important;
 }
