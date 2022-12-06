@@ -1,15 +1,15 @@
-const initialForm = document.getElementById("firstPassengerForm");
+const passengerList = document.getElementById("passengerList");
 const form = document.getElementById("passengerForm");
 
 const firstSection = document.getElementById("firstPassenger");
 const extraSection = document.getElementById("extraPassenger");
 
-initialForm.addEventListener("submit", (event) => {
+passengerList.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  if (!initialForm.checkValidity()) {
+  if (!passengerList.checkValidity()) {
     event.stopPropagation;
-    initialForm.classList.add("was-validated");
+    passengerList.classList.add("was-validated");
   } else {
     firstSection.hidden = true;
     extraSection.hidden = false;
