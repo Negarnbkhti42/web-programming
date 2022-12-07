@@ -65,6 +65,10 @@
         --color-font: var(--purple-90);
         --border-color: var(--white-18);
     }
+
+    .btn-close {
+        filter: invert(100%);
+    }
 }
 
 * {

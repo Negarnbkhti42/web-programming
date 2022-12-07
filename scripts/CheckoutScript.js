@@ -1,17 +1,27 @@
-const passengerList = document.getElementById("passengerList");
-const form = document.getElementById("passengerForm");
+const getPassenger = (name, passNo) => `<div class="card theme-dependant">
+<div class="card-body d-flex justify-content-between">
+  <p>${name}</p>
+  <p>${passNo}</p>
+</div>
+</div>`;
 
-const firstSection = document.getElementById("firstPassenger");
+const initialForm = document.getElementById("firstPassengerForm");
+const form = document.getElementById("passengerForm");
+const MODAL = document.getElementById("exampleModal");
+
+const passengerListSection = document.getElementById("passengerList");
 const extraSection = document.getElementById("extraPassenger");
 
-passengerList.addEventListener("submit", (event) => {
+initialForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  if (!passengerList.checkValidity()) {
+  if (!initialForm.checkValidity()) {
     event.stopPropagation;
-    passengerList.classList.add("was-validated");
+    initialForm.classList.add("was-validated");
   } else {
-    firstSection.hidden = true;
+    let name = event.target.querySelector("#passengerName").value;
+    let passNo = event.target.querySelector("#passportNo").value;
+    passengerListSection.innerHTML = getPassenger(name, passNo);
     extraSection.hidden = false;
   }
 });
@@ -22,6 +32,12 @@ form.addEventListener("submit", (event) => {
     event.stopPropagation();
     form.classList.add("was-validated");
   } else {
+    let name = event.target.querySelector("#passengerName");
+    let passNo = event.target.querySelector("#passportNo");
+    passengerListSection.innerHTML += getPassenger(name.value, passNo.value);
+    name.value = "";
+    passNo.value = "";
+    form.classList.remove("was-validated");
     console.log(event);
   }
 });
