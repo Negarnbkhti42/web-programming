@@ -14,6 +14,16 @@
     --violet-40: hsl(276, 91%, 40%);
     --violet-50: hsl(276, 91%, 50%);
     --violet-60: hsl(276, 91%, 60%);
+    --violet-70: hsl(276, 91%, 70%);
+    --violet-75: hsl(276, 91%, 75%);
+    --violet-85: hsl(276, 91%, 85%);
+    --violet-100-88: hsl(276, 100%, 84%);
+
+    --purple-40: hsl(280, 70%, 40%);
+    --purple-45: hsl(280, 70%, 45%);
+    --purple-55: hsl(280, 70%, 55%);
+    --purple-65: hsl(280, 70%, 65%);
+    --purple-90: hsl(280, 70%, 90%);
 
     --white: hsl(0, 100%, 100%);
     --white-18: hsl(282, 10%, 80%);
@@ -23,16 +33,17 @@
     --black-26: hsl(270, 5%, 26%);
 
     --primary: var(--violet-35);
-    --secondary: var(--blue-40);
+    --secondary: var(--purple-40);
 
     --primary-hover: var(--violet-29);
-    --secondary-hover: var(--blue-45);
+    --secondary-hover: var(--purple-45);
 
     --background: var(--white);
     --content-background: #f8f9fa;
+
     --font-color: #000;
     --secondary-color: #fff;
-
+    --color-font: var(--purple-55);
     --border-color: var(--black-14);
 
 
@@ -40,17 +51,18 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --primary: var(--blue-45);
-        --secondary: var(--violet-50);
+        --primary: var(--violet-60);
+        --secondary: var(--purple-55);
 
-        --primary-hover: var(--blue-55);
-        --secondary-hover: var(--violet-60);
+        --primary-hover: var(--violet-70);
+        --secondary-hover: var(--purple-65);
 
         --background: var(--black-13);
         --content-background: var(--black-26);
+
         --font-color: #fff;
         --secondary-color: #000;
-
+        --color-font: var(--purple-90);
         --border-color: var(--white-18);
     }
 }
@@ -125,6 +137,14 @@ input {
 
 
     z-index: 20;
+}
+
+.badge {
+    background-color: var(--violet-100-88) !important;
+}
+
+.text-colored {
+    color: var(--color-font);
 }
 
 .form-control.is-invalid,
