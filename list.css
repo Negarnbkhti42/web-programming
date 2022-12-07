@@ -3,7 +3,7 @@
 }
 
 .flight-duration {
-    border-bottom: 0.1rem solid var(--border-color);
+    border-bottom: 0.1rem solid var(--color-font);
 }
 
 .flight-path {
@@ -17,9 +17,6 @@
     justify-content: space-between;
 }
 
-.ticket-container {
-    background-color: rgb(225, 182, 237);
-}
 
 
 @media screen and (max-width: 769px) {

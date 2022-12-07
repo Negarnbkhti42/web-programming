@@ -24,17 +24,17 @@ const TICKET_STRUCTURE = (
         class="d-flex align-items-start justify-content-center flight-location"
       >
         <div class="d-flex flex-column align-items-center">
-          <p class="fw-bold">${ticket.start_time}</p>
+          <p class="fw-bold text-colored">${ticket.start_time}</p>
           <p>${ticket.start_date}</p>
-          <p>${ticket.source}</p>
+          <p class="text-colored">${ticket.source}</p>
         </div>
         <div class="w-25 d-flex justify-content-center flight-duration">
           ${ticket.duration}
         </div>
         <div class="d-flex flex-column align-items-center">
-          <p class="fw-bold">${ticket.finish_time}</p>
+          <p class="fw-bold text-colored">${ticket.finish_time}</p>
           <p>${ticket.finish_date}</p>
-          <p>${ticket.destination}</p>
+          <p class="text-colored">${ticket.destination}</p>
         </div>
       </div>
     </div>
