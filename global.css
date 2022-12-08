@@ -17,6 +17,7 @@
     --violet-70: hsl(276, 91%, 70%);
     --violet-75: hsl(276, 91%, 75%);
     --violet-85: hsl(276, 91%, 85%);
+    --violet-97: hsl(276, 91%, 97%);
     --violet-100-88: hsl(276, 100%, 84%);
 
     --purple-40: hsl(280, 70%, 40%);
@@ -139,7 +140,7 @@ input {
     z-index: 20;
 }
 
-.badge {
+.text-bg-warning {
     background-color: var(--violet-100-88) !important;
 }
 

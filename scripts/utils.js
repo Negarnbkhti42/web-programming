@@ -5,53 +5,55 @@ const PASSENGER_PARAM = "passenger";
 
 const TICKET_STRUCTURE = (
   ticket
-) => `<div class="card w-100 mb-2 theme-dependant ticket-container">
-<div class="card-body d-flex flex-column">
-  <div class="d-flex align-items-stretch ticket">
-    <div class="p-2">
-      <a href="#" class="btn btn-primary price-badge">
-      <span class="badge text-bg-${CLASS_COLORS["اکونومی"]}">${
-  ticket.class
-}</span>
-            <p>
-          ${ticket.price} تومان
-        </p>
-      </a>
+) => `<div class="card w-100 mb-2 theme-dependant">
+  <div class="card-body">
+  <div class="border-bottom d-flex pb-2">
+      <div class="flight-capacity">
+      ظرفیت باقی مانده: ${ticket.flight_capacity} نفر ${
+  ticket.flight_capacity < 3 * searchParams.passengers
+    ? '<span class="badge text-bg-danger ms-2">ظرفیت محدود</span>'
+    : ""
+}
+      </div>
     </div>
-
-    <div class="p-2 flex-grow-1 d-flex align-items-center justify-content-around">
-      <div class="d-flex flex-column align-items-center">
-        <img src="${AIRLINE_LOGOS[ticket.airline]}" style="width:50px;" />
+    <div class="ticket-container">
+      <div class="flight-airline">
+        <img src="${AIRLINE_LOGOS[ticket.airline]}" alt="${
+  ticket.airline
+}" class="airline-pic" />
         <p>${AIRLINE_NAMES[ticket.airline]}</p>
       </div>
       <div
-        class="d-flex align-items-start justify-content-center flight-location"
+        class=" flight-location"
       >
-        <div class="d-flex flex-column align-items-center">
+        <div class="flight-time">
           <p class="fw-bold text-colored">${ticket.start_time}</p>
-         <p>${ticket.start_date}</p>
-          <p class="text-colored">${ticket.source}</p>
-        </div>
-        <div class="w-25 d-flex justify-content-center flight-duration">
-          ${ticket.duration}
-        </div>
-        <div class="d-flex flex-column align-items-center">
+          <div class=" flight-duration">
+            ${ticket.duration}
+          </div>
           <p class="fw-bold text-colored">${ticket.finish_time}</p>
-         <p>${ticket.finish_date}</p>
-          <p class="text-colored">${ticket.destination}</p>
+        </div>
+        <div class="flight-path">
+          <div class="date-location">
+            <p>${ticket.start_date}</p>
+            <p class="text-colored">${ticket.source}</p>
+          </div>
+          <div class="date-location">
+            <p>${ticket.finish_date}</p>
+            <p class="text-colored">${ticket.destination}</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="border-top d-flex align-items-end">
-    ظرفیت باقی مانده: ${ticket.flight_capacity} نفر
-    ${
-      ticket.flight_capacity < 3 * searchParams.passengers
-        ? '<span class="badge text-bg-danger ms-2">ظرفیت محدود</span>'
-        : ""
-    }
-  </div>
+  <div class="card-footer">
+  <div class="p-2">
+  <a href="#" class="btn btn-primary price-badge">
+    <span class="badge text-bg-warning">${ticket.class}</span>
+    <p>${ticket.price} تومان</p>
+  </a>
 </div>
+  </div>
 </div>`;
 
 const CITIES = [
