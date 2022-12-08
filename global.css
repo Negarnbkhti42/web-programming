@@ -6,7 +6,6 @@
     --blue-76: hsl(181, 76%, 70%);
     --blue-100: hsl(176, 100%, 50%);
 
-
     --violet-15: hsl(270, 100%, 15%);
     --violet-21: hsl(270, 96%, 21%);
     --violet-29: hsl(276, 91%, 29%);
@@ -17,6 +16,7 @@
     --violet-70: hsl(276, 91%, 70%);
     --violet-75: hsl(276, 91%, 75%);
     --violet-85: hsl(276, 91%, 85%);
+    --violet-97: hsl(276, 91%, 97%);
     --violet-100-88: hsl(276, 100%, 84%);
 
     --purple-40: hsl(280, 70%, 40%);
@@ -65,7 +65,6 @@
         --color-font: var(--purple-90);
         --border-color: var(--white-18);
     }
-
     .btn-close {
         filter: invert(100%);
     }
@@ -143,7 +142,7 @@ input {
     z-index: 20;
 }
 
-.badge {
+.text-bg-warning {
     background-color: var(--violet-100-88) !important;
 }
 
@@ -154,5 +153,4 @@ input {
 .form-control.is-invalid,
 .was-validated .form-control:invalid {
     background-image: none;
-
 }
