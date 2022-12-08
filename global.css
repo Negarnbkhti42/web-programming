@@ -6,7 +6,6 @@
     --blue-76: hsl(181, 76%, 70%);
     --blue-100: hsl(176, 100%, 50%);
 
-
     --violet-15: hsl(270, 100%, 15%);
     --violet-21: hsl(270, 96%, 21%);
     --violet-29: hsl(276, 91%, 29%);
@@ -65,6 +64,9 @@
         --secondary-color: #000;
         --color-font: var(--purple-90);
         --border-color: var(--white-18);
+    }
+    .btn-close {
+        filter: invert(100%);
     }
 }
 
@@ -146,4 +148,9 @@ input {
 
 .text-colored {
     color: var(--color-font);
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    background-image: none;
 }
