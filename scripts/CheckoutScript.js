@@ -1,4 +1,4 @@
-const getPassenger = (name, passNo) => `<div class="card theme-dependant">
+const getPassenger = (name, passNo) => `<div class="card theme-dependant mb-2">
 <div class="card-body d-flex justify-content-between">
   <p>${name}</p>
   <p>${passNo}</p>
