@@ -17,13 +17,14 @@
     --violet-70: hsl(276, 91%, 70%);
     --violet-75: hsl(276, 91%, 75%);
     --violet-85: hsl(276, 91%, 85%);
+    --violet-97: hsl(276, 91%, 97%);
     --violet-100-88: hsl(276, 100%, 84%);
 
-    --purple-40: hsl(280, 70%, 40%);
-    --purple-45: hsl(280, 70%, 45%);
-    --purple-55: hsl(280, 70%, 55%);
-    --purple-65: hsl(280, 70%, 65%);
-    --purple-90: hsl(280, 70%, 90%);
+    --purple-40: hsl(285, 70%, 40%);
+    --purple-45: hsl(285, 70%, 45%);
+    --purple-55: hsl(285, 70%, 55%);
+    --purple-65: hsl(285, 70%, 65%);
+    --purple-90: hsl(285, 70%, 90%);
 
     --white: hsl(0, 100%, 100%);
     --white-18: hsl(282, 10%, 80%);
@@ -46,7 +47,6 @@
     --color-font: var(--purple-55);
     --border-color: var(--black-14);
 
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -64,6 +64,10 @@
         --secondary-color: #000;
         --color-font: var(--purple-90);
         --border-color: var(--white-18);
+    }
+
+    .btn-close {
+        filter: invert(100%);
     }
 }
 
@@ -150,18 +154,21 @@ input {
     position: absolute;
     top: 100%;
     inset-inline-start: 0;
-    /* width: 15rem; */
     max-height: 30rem;
     overflow-y: auto;
-
 
     z-index: 20;
 }
 
-.badge {
+.text-bg-warning {
     background-color: var(--violet-100-88) !important;
 }
 
 .text-colored {
     color: var(--color-font);
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    background-image: none;
 }

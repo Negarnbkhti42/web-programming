@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
@@ -22,7 +27,293 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <script src="./scripts/utils.js"></script>
+    <script src="./scripts/autocomplete.js" defer></script>
+    <title>سایت شاپرک</title>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="card.css" />
   </head>
-  <body></body>
+  <body>
+    <br />
+
+    <div class="tab-bar">
+      <div>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#">
+                <span class="container">
+                  <img class="icons" src="./assets/cards/icons/airplane.png" />
+                  <p class="plans">بلیط هواپیما</p></span
+                >
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                <span class="container">
+                  <img class="icons" src="./assets/cards/icons/ship.png" />
+                  <p class="plans">بلیط کشتی</p></span
+                >
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                <span class="container">
+                  <img class="icons" src="./assets/cards/icons/train.png" />
+                  <p class="plans">بلیط قطار</p>
+                </span></a
+              >
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                <span class="container">
+                  <img class="icons" src="./assets/cards/icons/bus.png" />
+                  <p class="plans">بلیط اتوبوس</p></span
+                >
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                <span class="container">
+                  <img class="icons" src="./assets/cards/icons/tourism.png" />
+                  <p class="plans">تور مسافرتی</p></span
+                >
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                <span class="container">
+                  <img class="icons" src="./assets/cards/icons/hotel.png" />
+                  <i class="fa-regular fa-hotel"></i>
+                  <p class="plans">رزرو هتل</p>
+                </span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                <span class="container">
+                  <img class="icons" src="./assets/cards/icons/vila.png" />
+                  <i class="fa-regular fa-hotel"></i>
+                  <p class="plans">ویلا و اقامت</p>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <section class="input-section">
+      <div class="input-div">
+        <form action="./list.html" class="w-100 row g-2" autocomplete="off">
+          <div class="form-floating col-md autocomplete">
+            <input
+              type="text"
+              class="form-control"
+              id="sourceInput"
+              name="source"
+              placeholder="مبدا"
+            />
+            <label for="sourceInput">مبدا</label>
+            <ul class="list-group options" hidden></ul>
+          </div>
+
+          <div class="form-floating col-md autocomplete">
+            <input
+              class="form-control"
+              type="text"
+              id="destInput"
+              name="dest"
+              placeholder="مقصد"
+            />
+            <label for="destInput">مقصد</label>
+            <ul class="options" hidden></ul>
+          </div>
+
+          <div class="form-floating col-md">
+            <input
+              type="date"
+              class="form-control"
+              id="date"
+              name="date"
+              placeholder="تاریخ"
+            />
+            <label for="date">تاریخ</label>
+          </div>
+
+          <div class="form-floating col-md">
+            <input
+              type="number"
+              class="form-control"
+              id="passenger"
+              name="passenger"
+              placeholder="تعداد مسافر"
+            />
+            <label for="passenger">تعداد مسافر</label>
+          </div>
+
+          <button class="col-sm form-control btn btn-secondary" type="submit">
+            جست و جو
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <br /><br /><br />
+
+    <div class="card-container">
+      <div class="card">
+        <img
+          src="./assets/cards/logoCard/question.png"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <a href="questionPage.html" target="_blank" class="btn btn-primary"
+            >سوالات متداول</a
+          >
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="./assets/cards/logoCard/insurance.png"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <a href="insurancePage.html" target="_blank" class="btn btn-primary"
+            >بیمه مسافرت</a
+          >
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="./assets/cards/logoCard/qr.png"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <a href="qrPage.html" target="_blank" class="btn btn-primary">
+            دریافت اپلیکشن</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <section class="horizental-cards">
+      <div class="horizental-card">
+        <img
+          src="./assets/cards/logoCard/happy.svg"
+          class="offer-card-img-top"
+          alt="..."
+        />
+        <div class="offer-card-body">
+          <h5 class="card-title">پیشنهاد ویژه</h5>
+          <p class="card-text">
+            شما از این قسمت میتوانید بلیط های چارتری و پیشنهادهای روزانه را
+            دریافت کنید.
+          </p>
+          <a href="#" class="btn btn-primary" id="offer"
+            >مشاهده پیشنهادات ویژه</a
+          >
+        </div>
+      </div>
+
+      <div class="horizental-card">
+        <img
+          src="./assets/cards/logoCard/suporter.png"
+          class="offer-card-img-top"
+          alt="contact with supporter"
+        />
+        <div class="offer-card-body">
+          <h5 class="card-title">دریافت پشتیبانی</h5>
+          <p class="card-text">
+            شما از این قسمت میتوانید با پشتیبانان سایت شاپرک ارتباط برقرار کنید.
+          </p>
+          <a href="supporter.html" class="btn btn-primary" id="supporter"
+            >برقراری ارتباط با پشتیبان</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <br />
+
+    <div class="aircrafts">
+      <h2 class="title-h2">هواپیماهای موجود در شرکت‌های هوایی ایران</h2>
+
+      <section class="aircraft">
+        <img
+          class="plane-img"
+          src="./assets/cards/logoCard/p2.png"
+          alt="
+هواپیمای ایرباس A300"
+        />
+        <h3>هواپیمای ایرباس A300</h3>
+        <p>
+          این هواپیما یک هواپیمای مسافربری پهن پیکر دو موتوره است که در سال 1969
+          معرفی و در سال 1972 اولین پرواز خود را انجام داد. این هواپیما در حال
+          حاضر نیز فعال است. ایران ایر، هواپیمایی معراج، هواپیمایی قشم و
+          هواپیمایی ماهان از جمله شرکت های هواپیمائی در ایران هستند که از آن
+          استفاده می‌کنند.
+        </p>
+      </section>
+      <br />
+      <br />
+      <br />
+
+      <section class="aircraft">
+        <img
+          class="plane-img"
+          src="./assets/cards/logoCard/p1.png"
+          alt="
+هواپیمای ایرباس A310 "
+        />
+        <h3>هواپیمای ایرباس A310</h3>
+
+        <p>
+          یک هواپیمای مسافربری است که برای بردهای متوسط و بلند ساخته شده و نوع
+          کوچکتر هواپیمای A300 است. این هواپیما به سفارش شرکت‌های سوئیس ایر و
+          لوفت‌هانزا ساخته شد. اولین پرواز این هواپیما در سال 1982 انجام پذیرفت.
+        </p>
+      </section>
+      <br />
+      <br />
+
+      <section class="aircraft">
+        <img
+          class="plane-img"
+          src="./assets/cards/logoCard/p3.png"
+          alt="
+هواپیمای ایرباس A320"
+        />
+        <h3>هواپیمای ایرباس A320</h3>
+
+        <p>
+          این هواپیما از خانواده هواپیماهای باریک پیکر است که برای نخستین بار در
+          سال 1987 به پرواز درآمد. ایران ایر از کاربران اصلی این هواپیما به حساب
+          می آید. هواپیما A320 یک هواپیمای دو موتوره با یک راهرو است و ظرفیت
+          جابجائی 150 مسافر را دارد.
+        </p>
+      </section>
+      <br />
+      <br />
+    </div>
+
+    <footer>
+      <p><span>Neda Taghizadeh Serajeh</span><span>98170743</span></p>
+      <p><span>Shahab Hoseini Moghadam</span><span>98105716</span></p>
+      <p><span>Negar Nobakhti</span><span>98171201</span></p>
+    </footer>
+  </body>
 </html>
