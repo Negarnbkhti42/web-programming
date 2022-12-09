@@ -1,67 +1,10 @@
 :root {
     --blue-40: hsl(190, 100%, 40%);
-    --blue-76: hsl(181, 76%, 50%);
-    --blue-100: hsl(176, 100%, 50%);
-
-
-    --violet-15: hsl(270, 100%, 15%);
-    --violet-21: hsl(270, 96%, 21%);
-    --violet-29: hsl(276, 91%, 29%);
-    --violet-35: hsl(276, 91%, 35%);
-
-
-    --primary: var(--violet-35);
-    --secondary: var(--violet-21);
-
-    --primary-hover: var(--violet-29);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --primary: var(--blue-76);
-
-        --primary-hover: var(--blue-40)
-    }
-}
-
-.btn-primary {
-    background-color: var(--primary) !important;
-    border-color: var(--primary) !important;
-}
-
-.btn-primary:hover {
-    background-color: var(--primary-hover);
-    border-color: var(--primary-hover);
-}
-
-.btn-primary:active {
-    background-color: var(--primary) !important;
-    border-color: var(--primary) !important;
-}
-
-.fill-primary {
-    color: #fff;
-    background-color: var(--primary);
-}
-
-.plane {
-    padding: 0.5rem 0.3rem 0.5rem 0.5rem;
-    border-radius: 50%;
-}
-
-.rotated {
-    transform: rotate(180deg);
-}
-
-
-:root {
-    --blue-40: hsl(190, 100%, 40%);
     --blue-45: hsl(190, 100%, 45%);
     --blue-55: hsl(190, 100%, 55%);
     --blue-70: hsl(190, 100%, 70%);
     --blue-76: hsl(181, 76%, 70%);
     --blue-100: hsl(176, 100%, 50%);
-
 
     --violet-15: hsl(270, 100%, 15%);
     --violet-21: hsl(270, 96%, 21%);
@@ -73,13 +16,14 @@
     --violet-70: hsl(276, 91%, 70%);
     --violet-75: hsl(276, 91%, 75%);
     --violet-85: hsl(276, 91%, 85%);
+    --violet-97: hsl(276, 91%, 97%);
     --violet-100-88: hsl(276, 100%, 84%);
 
-    --purple-40: hsl(280, 70%, 40%);
-    --purple-45: hsl(280, 70%, 45%);
-    --purple-55: hsl(280, 70%, 55%);
-    --purple-65: hsl(280, 70%, 65%);
-    --purple-90: hsl(280, 70%, 90%);
+    --purple-40: hsl(285, 70%, 40%);
+    --purple-45: hsl(285, 70%, 45%);
+    --purple-55: hsl(285, 70%, 55%);
+    --purple-65: hsl(285, 70%, 65%);
+    --purple-90: hsl(285, 70%, 90%);
 
     --white: hsl(0, 100%, 100%);
     --white-18: hsl(282, 10%, 80%);
@@ -120,6 +64,10 @@
         --secondary-color: #000;
         --color-font: var(--purple-90);
         --border-color: var(--white-18);
+    }
+
+    .btn-close {
+        filter: invert(100%);
     }
 }
 
@@ -190,10 +138,12 @@ input {
     /* width: 15rem; */
     max-height: 30rem;
     overflow-y: auto;
+
+
     z-index: 20;
 }
 
-.badge {
+.text-bg-warning {
     background-color: var(--violet-100-88) !important;
 }
 
@@ -201,6 +151,7 @@ input {
     color: var(--color-font);
 }
 
-
-
-
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    background-image: none;
+}
