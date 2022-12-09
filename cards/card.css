@@ -53,11 +53,6 @@
     box-shadow: 1.5px 0 5px 1px rgba(90, 55, 105, 0.53);
 }
 
-.pp1 {
-    margin-right: 60px;
-}
-
-
 .plans {
     display: flex;
     justify-content: center;
@@ -99,7 +94,6 @@
 
 .offer-card-body {
     height: 200px;
-    /*width: 40%;*/
 }
 
 .offer-card-img-top {
@@ -129,8 +123,8 @@
 
 .horizental-card {
     box-shadow: rgba(90, 55, 105, 0.53) 1.5px 3px 5px 2px;
-    margin-right: 30px;
-    margin-left: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
     height: 280px;
     width: 500px;
     display: flex;
@@ -200,9 +194,6 @@ h3 {
         width: 130px;
     }
 
-    .pp {
-        margin-right: 30px;
-    }
 }
 
 @media screen and (max-width: 920px) {
@@ -210,18 +201,13 @@ h3 {
         width: 100px;
     }
 
-    .pp {
-
-        padding-right: 50px;
-    }
-
     .aircrafts {
         width: 100%;
     }
 
     .icons {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
         margin-right: -8px;
     }
 
@@ -251,10 +237,6 @@ h3 {
         flex-direction: row;
     }
 
-    .pp1 {
-        margin-right: 20px;
-    }
-
     .card {
         width: 250px;
         height: 400px;
@@ -279,12 +261,12 @@ h3 {
     }
 
     .page-link {
-        width: 60px;
+        width: 80px;
     }
 
     .icons {
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         margin-right: -18px;
     }
 
@@ -301,7 +283,7 @@ h3 {
 
     .input-div {
         height: 400px;
-        width: 100px;
+        width: 520px;
     }
 
 
@@ -335,9 +317,10 @@ h3 {
 }
 
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 520px) {
+
     .page-link {
-        width: 50px;
+        width: 65px;
     }
 
     .plans {
@@ -352,8 +335,45 @@ h3 {
 
     .horizental-card {
         height: 450px;
-        width: 310px;
+        width: 280px;
     }
+
+    .offer-card-img-top {
+        width: 180px;
+        height: 240px;
+    }
+
+    .input-div {
+        width: 280px;
+    }
+}
+
+
+@media screen and (max-width: 440px) {
+
+    .tab-bar, .pagination {
+        flex-direction: column;
+    }
+
+    /*.plans{*/
+    /*    width: 80px;*/
+    /*    height: 70px;*/
+    /*}*/
+    .page-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 180px;
+        padding-right: 50px;
+
+    }
+
+    .icons {
+        width: 65px;
+        height: 65px;
+        margin-right: -8px;
+    }
+
 }
 
 
