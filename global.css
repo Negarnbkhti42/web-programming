@@ -107,6 +107,21 @@ input {
     border-color: var(--primary) !important;
 }
 
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.btn-outline-primary:active {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
 .btn-secondary {
     background-color: var(--secondary);
     border-color: var(--secondary);
@@ -121,6 +136,10 @@ input {
 .btn-secondary:active {
     background-color: var(--secondary) !important;
     border-color: var(--secondary) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
 }
 
 .autocomplete {

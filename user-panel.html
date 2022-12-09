@@ -10,7 +10,10 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -25,258 +28,220 @@
     <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./login.css" />
     <script>
-        function toggleSidebar() {
-            const sidebar = document.getElementById("sidebar-mobile")
-            if (sidebar.classList.contains("d-block")) {
-                sidebar.classList.remove("d-block")
-                sidebar.classList.add("d-none")
-            } else {
-                sidebar.classList.remove("d-none")
-                sidebar.classList.add("d-block")
-            }
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar-mobile");
+        if (sidebar.classList.contains("d-block")) {
+          sidebar.classList.remove("d-block");
+          sidebar.classList.add("d-none");
+        } else {
+          sidebar.classList.remove("d-none");
+          sidebar.classList.add("d-block");
         }
+      }
     </script>
     <title>پنل کاربری</title>
   </head>
   <body>
     <nav class="bg-primary navbar navbar-light">
-        <button class="btn btn-close-white d-sm-block d-md-none" onclick="toggleSidebar()">
-            <i class="bi bi-list" style="font-size: 30px;"></i>
-        </button>
-        <a class="navbar-brand text-white px-3" href="#">شاپرک</a>
+      <button
+        class="btn btn-close-white d-sm-block d-md-none"
+        onclick="toggleSidebar()"
+      >
+        <i class="bi bi-list" style="font-size: 30px"></i>
+      </button>
+      <a class="navbar-brand text-white px-3" href="#">شاپرک</a>
     </nav>
-    <div style="display: flex; flex-direction: row;">
-        <div style="width: 200px; display: flex; flex-direction: column;" class="d-none d-md-block">
-            <div class="centeralize" style="flex-direction: column; margin-bottom: -12px;">
-                <img
-                    src="profile.jpeg"
-                    style="width: 150px; height: 150px; border: 2px solid hsl(270, 96%, 21%)"
-                    class="rounded-circle mb-3 bg-primary my-2"
-                />
-                <p class="lead p-3">
-                    خوش آمدید، شهاب!
-                </p>
-            </div>
-            <hr />
-            <div class="vstack gap-2">
-                <button class="btn btn-outline-primary">عمل ۱</button>
-                <button class="btn btn-outline-primary">عمل ۲</button>
-                <a class="btn btn-danger" href="./login.html"><i class="bi bi-box-arrow-right mx-2"></i>خروج</a>
-            </div>
-        </div>
+    <div style="display: flex; flex-direction: row">
+      <div
+        style="width: 200px; display: flex; flex-direction: column"
+        class="d-none d-md-block"
+      >
         <div
-            id="sidebar-mobile"
-            style="width: 200px; display: flex; flex-direction: column; position: absolute; right: 0; top:56; z-index: 5"
-            class="p-2 d-none d-md-none bg-white shadow-lg theme-dependant"
+          class="centeralize"
+          style="flex-direction: column; margin-bottom: -12px"
         >
-            <div class="centeralize" style="flex-direction: column; margin-bottom: -12px;">
-                <img
-                    src="profile.jpeg"
-                    style="width: 150px; height: 150px; border: 2px solid hsl(270, 96%, 21%)"
-                    class="rounded-circle mb-3"
-                />
-                <p class="lead p-3">
-                    خوش آمدید، شهاب!
-                </p>
-            </div>
-            <hr />
-            <div class="vstack gap-2">
-                <button class="btn btn-outline-primary theme-dependant">عمل ۱</button>
-                <button class="btn btn-outline-primary theme-dependant">عمل ۲</button>
-                <a class="btn btn-danger" href="./login.html"><i class="bi bi-box-arrow-right mx-2"></i>خروج</a>
-            </div>
+          <img
+            src="profile.jpeg"
+            style="
+              width: 150px;
+              height: 150px;
+              border: 2px solid hsl(270, 96%, 21%);
+            "
+            class="rounded-circle mb-3 bg-primary my-2"
+          />
+          <p class="lead p-3">خوش آمدید، شهاب!</p>
         </div>
-        <div class="vr"></div>
-        <div style="flex-grow: 1" class="py-2 vstack gap-4 container-lg">
-            <div class="card theme-dependant">
-                <div class="card-header bg-primary">
-                    <h5 class="text-center text-white">
-                        airline
-                    </h5>
-                </div>
-                <div class="row p-4">
-                    <div class="col col-md-6 col-12 hstack">
-                        <div class="vstack justify-content-center align-items-center flex-grow-0" style="margin-left: 64px">
-                            <h4 style="font-weight: 800">
-                                BER
-                            </h4>
-                            <h1>
-                                <i class="bi bi-airplane-engines" style="color: purple;"></i>
-                            </h1>
-                            <h4 style="font-weight: 800">
-                                TEH
-                            </h4>
-                        </div>
-                        <div class="vstack gap-4">
-                            <div class="vstack">
-                                <span>
-                                    نام مسافر
-                                </span>
-                                <h6 style="font-weight: 800">
-                                    شهاب حسینی مقدم
-                                </h6>
-                            </div>
-                            <div class="vstack">
-                                <span>
-                                    کد ملی
-                                </span>
-                                <h6 style="font-weight: 800">
-                                    0670000000
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col col-md-6 col-12">
-                        <div class="row" style="font-size: 12px">
-                            <div class="col">
-                                <div>
-                                    شماره
-                                </div>
-                                <div style="font-weight: 800; font-size: 14px;">
-                                    N69420
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div>
-                                    گیت
-                                </div>
-                                <div style="font-weight: 800; font-size: 14px;">
-                                    A10
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div>
-                                    صندلی
-                                </div>
-                                <div style="font-weight: 800; font-size: 14px;">
-                                    14C
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div>
-                                    تاریخ
-                                </div>
-                                <div style="font-weight: 800; font-size: 14px;">
-                                    2022/11/12
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div>
-                                    ورود
-                                </div>
-                                <div style="font-weight: 800; font-size: 14px;">
-                                    11:30
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div>
-                                    خروج
-                                </div>
-                                <div style="font-weight: 800; font-size: 14px;">
-                                    14:20
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card theme-dependant">
-                <div class="card-header bg-primary">
-                    <h5 class="text-center text-white">
-                        airline
-                    </h5>
-                </div>
-                <div class="row p-4">
-                    <div class="col col-md-6 col-12 hstack">
-                        <div class="vstack justify-content-center align-items-center flex-grow-0" style="margin-left: 64px">
-                            <h4 style="font-weight: 800">
-                                BER
-                            </h4>
-                            <h1>
-                                <i class="bi bi-airplane-engines" style="color: purple;"></i>
-                            </h1>
-                            <h4 style="font-weight: 800">
-                                TEH
-                            </h4>
-                        </div>
-                        <div class="vstack gap-4">
-                            <div class="vstack">
-                                <span>
-                                    نام مسافر
-                                </span>
-                                <h6 style="font-weight: 800">
-                                    شهاب حسینی مقدم
-                                </h6>
-                            </div>
-                            <div class="vstack">
-                                <span>
-                                    کد ملی
-                                </span>
-                                <h6 style="font-weight: 800">
-                                    0670000000
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col col-md-6 col-12">
-                        <div class="row" style="font-size: 12px">
-                            <div class="col">
-                                <div>
-                                    شماره
-                                </div>
-                                <div style="font-weight: 800; font-size: 14px;">
-                                    N69420
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div>
-                                    گیت
-                                </div>
-                                <div style="font-weight: 800; font-size: 14px;">
-                                    A10
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div>
-                                    صندلی
-                                </div>
-                                <div style="font-weight: 800; font-size: 14px;">
-                                    14C
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div>
-                                    تاریخ
-                                </div>
-                                <div style="font-weight: 800; font-size: 14px;">
-                                    2022/11/12
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div>
-                                    ورود
-                                </div>
-                                <div style="font-weight: 800; font-size: 14px;">
-                                    11:30
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div>
-                                    خروج
-                                </div>
-                                <div style="font-weight: 800; font-size: 14px;">
-                                    14:20
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <hr />
+        <div class="vstack gap-2">
+          <button class="btn btn-outline-primary">عمل ۱</button>
+          <button class="btn btn-outline-primary">عمل ۲</button>
+          <a class="btn btn-danger" href="./login.html"
+            ><i class="bi bi-box-arrow-right mx-2"></i>خروج</a
+          >
         </div>
+      </div>
+      <div
+        id="sidebar-mobile"
+        style="
+          width: 200px;
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          right: 0;
+          top: 56;
+          z-index: 5;
+        "
+        class="p-2 d-none d-md-none bg-white shadow-lg theme-dependant"
+      >
+        <div
+          class="centeralize"
+          style="flex-direction: column; margin-bottom: -12px"
+        >
+          <img
+            src="profile.jpeg"
+            style="
+              width: 150px;
+              height: 150px;
+              border: 2px solid hsl(270, 96%, 21%);
+            "
+            class="rounded-circle mb-3"
+          />
+          <p class="lead p-3">خوش آمدید، شهاب!</p>
+        </div>
+        <hr />
+        <div class="vstack gap-2">
+          <button class="btn btn-outline-primary">عمل ۱</button>
+          <button class="btn btn-outline-primary">عمل ۲</button>
+          <a class="btn btn-danger" href="./login.html"
+            ><i class="bi bi-box-arrow-right mx-2"></i>خروج</a
+          >
+        </div>
+      </div>
+      <div class="vr"></div>
+      <div style="flex-grow: 1" class="py-2 vstack gap-4 container-lg">
+        <div class="card theme-dependant">
+          <div class="card-header bg-primary">
+            <h5 class="text-center text-white">airline</h5>
+          </div>
+          <div class="row p-4">
+            <div class="col col-md-6 col-12 hstack">
+              <div
+                class="vstack justify-content-center align-items-center flex-grow-0"
+                style="margin-left: 64px"
+              >
+                <h4 style="font-weight: 800">BER</h4>
+                <h1>
+                  <i class="bi bi-airplane-engines" style="color: purple"></i>
+                </h1>
+                <h4 style="font-weight: 800">TEH</h4>
+              </div>
+              <div class="vstack gap-4">
+                <div class="vstack">
+                  <span> نام مسافر </span>
+                  <h6 style="font-weight: 800">شهاب حسینی مقدم</h6>
+                </div>
+                <div class="vstack">
+                  <span> کد ملی </span>
+                  <h6 style="font-weight: 800">0670000000</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col col-md-6 col-12">
+              <div class="row" style="font-size: 12px">
+                <div class="col">
+                  <div>شماره</div>
+                  <div style="font-weight: 800; font-size: 14px">N69420</div>
+                </div>
+                <div class="col">
+                  <div>گیت</div>
+                  <div style="font-weight: 800; font-size: 14px">A10</div>
+                </div>
+                <div class="col">
+                  <div>صندلی</div>
+                  <div style="font-weight: 800; font-size: 14px">14C</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div>تاریخ</div>
+                  <div style="font-weight: 800; font-size: 14px">
+                    2022/11/12
+                  </div>
+                </div>
+                <div class="col">
+                  <div>ورود</div>
+                  <div style="font-weight: 800; font-size: 14px">11:30</div>
+                </div>
+                <div class="col">
+                  <div>خروج</div>
+                  <div style="font-weight: 800; font-size: 14px">14:20</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card theme-dependant">
+          <div class="card-header bg-primary">
+            <h5 class="text-center text-white">airline</h5>
+          </div>
+          <div class="row p-4">
+            <div class="col col-md-6 col-12 hstack">
+              <div
+                class="vstack justify-content-center align-items-center flex-grow-0"
+                style="margin-left: 64px"
+              >
+                <h4 style="font-weight: 800">BER</h4>
+                <h1>
+                  <i class="bi bi-airplane-engines" style="color: purple"></i>
+                </h1>
+                <h4 style="font-weight: 800">TEH</h4>
+              </div>
+              <div class="vstack gap-4">
+                <div class="vstack">
+                  <span> نام مسافر </span>
+                  <h6 style="font-weight: 800">شهاب حسینی مقدم</h6>
+                </div>
+                <div class="vstack">
+                  <span> کد ملی </span>
+                  <h6 style="font-weight: 800">0670000000</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col col-md-6 col-12">
+              <div class="row" style="font-size: 12px">
+                <div class="col">
+                  <div>شماره</div>
+                  <div style="font-weight: 800; font-size: 14px">N69420</div>
+                </div>
+                <div class="col">
+                  <div>گیت</div>
+                  <div style="font-weight: 800; font-size: 14px">A10</div>
+                </div>
+                <div class="col">
+                  <div>صندلی</div>
+                  <div style="font-weight: 800; font-size: 14px">14C</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div>تاریخ</div>
+                  <div style="font-weight: 800; font-size: 14px">
+                    2022/11/12
+                  </div>
+                </div>
+                <div class="col">
+                  <div>ورود</div>
+                  <div style="font-weight: 800; font-size: 14px">11:30</div>
+                </div>
+                <div class="col">
+                  <div>خروج</div>
+                  <div style="font-weight: 800; font-size: 14px">14:20</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
