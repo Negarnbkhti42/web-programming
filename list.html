@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./ticket.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/utils.js" defer></script>
+    <script src="./scripts/autocomplete.js" defer></script>
+    <script src="./scripts/listScript.js" defer></script>
+    <title>جست و جوی بلیط</title>
+  </head>
+  <body>
+    <nav class="navbar bg-light theme-dependant">
+      <form class="w-100 row g-2" autocomplete="off">
+        <div class="form-floating col-md autocomplete">
+          <input
+            type="text"
+            class="form-control"
+            id="sourceInput"
+            name="source"
+            placeholder="مبدا"
+          />
+          <label for="sourceInput">مبدا</label>
+          <ul class="list-group options" hidden></ul>
+        </div>
+
+        <div class="form-floating col-md autocomplete">
+          <input
+            class="form-control"
+            type="text"
+            id="destInput"
+            name="dest"
+            placeholder="مقصد"
+          />
+          <label for="destInput">مقصد</label>
+          <ul class="options" hidden></ul>
+        </div>
+
+        <div class="form-floating col-md">
+          <input
+            type="date"
+            class="form-control"
+            id="date"
+            name="date"
+            placeholder="تاریخ"
+          />
+          <label for="date">تاریخ</label>
+        </div>
+
+        <div class="form-floating col-md">
+          <input
+            type="number"
+            class="form-control"
+            id="passenger"
+            name="passenger"
+            placeholder="تعداد مسافر"
+          />
+          <label for="passenger">تعداد مسافر</label>
+        </div>
+        <button class="col-sm form-control btn btn-secondary" type="submit">
+          ویرایش جست و جو
+        </button>
+      </form>
+    </nav>
+    <main
+      class="d-flex flex-column align-items-center m-3"
+      id="ticketList"
+    ></main>
+  </body>
+</html>
