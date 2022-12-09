@@ -1,0 +1,414 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-div {
+    box-shadow: 1.5px 0 5px 1px rgba(90, 55, 105, 0.53);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.tab-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    /*margin-top: 44px;*/
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-item {
+    border-radius: 10px;
+}
+
+.page-link {
+    width: 180px;
+    height: 140px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+.pagination {
+    box-shadow: 1.5px 0 5px 1px rgba(90, 55, 105, 0.53);
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    color: #5D0896;
+}
+
+.card-container {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icons {
+    width: 65px;
+    height: 65px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    width: 220px;
+}
+
+.card {
+    box-shadow: rgba(90, 55, 105, 0.53) 1.5px 3px 5px 2px;
+    margin-right: 30px;
+    margin-left: 30px;
+    height: 350px;
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.offer-card-body {
+    height: 200px;
+}
+
+.offer-card-img-top {
+    height: 250px;
+    width: 230px;
+}
+
+#supporter {
+    margin-top: 30px;
+    width: 90%;
+
+}
+
+#offer {
+    margin-top: 25px;
+    width: 90%;
+
+}
+
+
+.horizental-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.horizental-card {
+    box-shadow: rgba(90, 55, 105, 0.53) 1.5px 3px 5px 2px;
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 280px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.aircrafts {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: #efe4ff;
+}
+
+.title-h2 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.aircraft {
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+h3 {
+    color: #5D0896;
+}
+
+.plane-img {
+    width: 120px;
+    height: 120px;
+    margin-top: -20px;
+}
+
+.plane-img1 {
+    width: 110px;
+    height: 110px;
+    margin-top: -20px;
+}
+
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+    width: 100%;
+    font-size: 1.2rem;
+
+    padding: 20px 5px;
+}
+
+footer p {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 5px;
+}
+
+
+@media screen and (max-width: 1300px) {
+    .page-link {
+        width: 130px;
+    }
+
+}
+
+@media screen and (max-width: 920px) {
+    .page-link {
+        width: 100px;
+    }
+
+    .aircrafts {
+        width: 100%;
+    }
+
+    .icons {
+        width: 60px;
+        height: 60px;
+        margin-right: -8px;
+    }
+
+    .btn {
+        width: 180px;
+    }
+
+    .horizental-card {
+        height: 400px;
+    }
+
+
+    .offer-card-body {
+        margin-top: -100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .input-div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .input-section {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card {
+        width: 250px;
+        height: 400px;
+    }
+
+    .offer-card-body {
+        margin-top: 0;
+    }
+
+    .card-container {
+        flex-direction: column;
+        gap: 60px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .page-link {
+        width: 80px;
+    }
+
+    .icons {
+        width: 35px;
+        height: 35px;
+        margin-right: -18px;
+    }
+
+    .horizental-cards {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    footer p {
+        flex-direction: column;
+    }
+
+    .input-div {
+        height: 400px;
+        width: 520px;
+    }
+
+
+    .col-sm {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    .aircraft {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
+
+@media screen and (max-width: 580px) {
+    .col-sm {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .horizental-card {
+        width: 350px;
+    }
+
+    .offer-card-body {
+        margin-top: -140px;
+    }
+
+}
+
+
+@media screen and (max-width: 520px) {
+
+    .page-link {
+        width: 65px;
+    }
+
+    .plans {
+        margin-right: -15px;
+    }
+
+    .icons {
+        width: 30px;
+        height: 30px;
+        margin-right: -20px;
+    }
+
+    .horizental-card {
+        height: 450px;
+        width: 280px;
+    }
+
+    .offer-card-img-top {
+        width: 180px;
+        height: 240px;
+    }
+
+    .input-div {
+        width: 280px;
+    }
+}
+
+
+@media screen and (max-width: 440px) {
+
+    .tab-bar,
+    .pagination {
+        flex-direction: column;
+    }
+
+    /*.plans{*/
+    /*    width: 80px;*/
+    /*    height: 70px;*/
+    /*}*/
+    .page-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 180px;
+        padding-right: 50px;
+
+    }
+
+    .icons {
+        width: 65px;
+        height: 65px;
+        margin-right: -8px;
+    }
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .card {
+        background-color: rgba(26, 26, 26, 0.12);
+    }
+
+    .aircrafts {
+        background-color: rgba(160, 122, 201, 0.53);
+    }
+
+    h3 {
+        color: black;
+    }
+
+    .plans,
+    .page-link {
+
+        background-color: gray;
+    }
+
+}
