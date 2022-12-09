@@ -1,0 +1,64 @@
+.supporter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.support {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    padding-top: 10px;
+    width: 600px;
+    height: 320px;
+    border-right: solid 4px blueviolet;
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 40px;
+}
+
+span{
+    padding-right: 10px;
+    padding-top: 5px;
+    font-size: larger;
+}
+
+p{
+    padding-right: 10px;
+    padding-top: 6px;
+    font-size: large;
+}
+
+.sup-img{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 450px;
+    height: 450px;
+    margin-top: 50px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+}
+
+.train-img{
+    width: 100vw;
+    height: 600px;
+}

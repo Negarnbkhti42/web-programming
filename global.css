@@ -135,11 +135,8 @@ input {
     position: absolute;
     top: 100%;
     inset-inline-start: 0;
-    /* width: 15rem; */
     max-height: 30rem;
     overflow-y: auto;
-
-
     z-index: 20;
 }
 
