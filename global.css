@@ -6,6 +6,7 @@
     --blue-76: hsl(181, 76%, 70%);
     --blue-100: hsl(176, 100%, 50%);
 
+
     --violet-15: hsl(270, 100%, 15%);
     --violet-21: hsl(270, 96%, 21%);
     --violet-29: hsl(276, 91%, 29%);
@@ -45,7 +46,6 @@
     --secondary-color: #fff;
     --color-font: var(--purple-55);
     --border-color: var(--black-14);
-
 
 }
 
@@ -111,6 +111,21 @@ input {
     border-color: var(--primary) !important;
 }
 
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+.btn-outline-primary:active {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
 .btn-secondary {
     background-color: var(--secondary);
     border-color: var(--secondary);
@@ -127,6 +142,10 @@ input {
     border-color: var(--secondary) !important;
 }
 
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
 .autocomplete {
     position: relative;
 }
@@ -137,6 +156,7 @@ input {
     inset-inline-start: 0;
     max-height: 30rem;
     overflow-y: auto;
+
     z-index: 20;
 }
 
