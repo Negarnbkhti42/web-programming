@@ -10,6 +10,12 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./ticket.css" />
     <script
@@ -23,6 +29,7 @@
       src="https://kit.fontawesome.com/2c02c3225a.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./scripts/utils.js"></script>
     <script defer src="./scripts/CheckoutScript.js"></script>
     <title>پرداخت</title>
   </head>
@@ -31,31 +38,29 @@
       <div class="card w-100 mb-2 theme-dependant">
         <div class="card-body">
           <div class="border-bottom d-flex pb-2">
-            <div class="flight-capacity">ظرفیت باقی مانده: 2 نفر</div>
+            <div class="flight-capacity">
+              <p>ظرفیت باقی مانده:&nbsp;<span id="capacityField"></span></p>
+            </div>
           </div>
           <div class="ticket-container">
-            <div class="flight-airline">
-              <img
-                src="./assets/flight-icons/caspian.webp"
-                alt="caspian"
-                class="airline-pic"
-              />
-              <p>کاسپین</p>
+            <div class="flight-airline" id="airlineField">
+              <img class="airline-pic" />
+              <p></p>
             </div>
             <div class="flight-location">
               <div class="flight-time">
-                <p class="fw-bold text-colored">12:32</p>
-                <div class="flight-duration">01 ساعت و 02 دقیقه</div>
-                <p class="fw-bold text-colored">13:23</p>
+                <p class="fw-bold text-colored" id="startTime"></p>
+                <div class="flight-duration pb-1" id="duration"></div>
+                <p class="fw-bold text-colored" id="finishTime"></p>
               </div>
               <div class="flight-path">
                 <div class="date-location">
-                  <p>1401/12/13</p>
-                  <p class="text-colored">تهران</p>
+                  <p id="startDate"></p>
+                  <p class="text-colored" id="source"></p>
                 </div>
                 <div class="date-location">
-                  <p>1401/12/12</p>
-                  <p class="text-colored">شیراز</p>
+                  <p id="finishDate"></p>
+                  <p class="text-colored" id="destination"></p>
                 </div>
               </div>
             </div>
@@ -91,32 +96,31 @@
               شماره پاسپورت باید شامل یک حرف بزرگ انگلیسی و 8 رقم باشد
             </div>
           </div>
-          <div class="modal-footer justify-content-start">
-            <button type="submit" class="btn btn-primary">ثبت اطلاعات</button>
-          </div>
+          <button type="submit" class="btn btn-primary">ثبت اطلاعات</button>
         </form>
       </section>
       <section id="extraPassenger" hidden>
         <button
-          class="btn btn-primary"
+          id="passengerAdder"
+          class="btn btn-secondary"
           data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
+          data-bs-target="#passengerModal"
         >
           اضافه کردن مسافر
           <i class="fa-solid fa-plus"></i>
         </button>
-
+        <button class="btn btn-primary">تکمیل خرید</button>
         <div
           class="modal fade"
-          id="exampleModal"
+          id="passengerModal"
           tabindex="-1"
-          aria-labelledby="exampleModalLabel"
+          aria-labelledby="passengerModalLabel"
           aria-hidden="true"
         >
           <div class="modal-dialog">
             <div class="modal-content theme-dependant">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                <h1 class="modal-title fs-5" id="passengerModalLabel">
                   اطلاعات مسافر
                 </h1>
                 <button

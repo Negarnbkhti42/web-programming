@@ -28,7 +28,7 @@ const TICKET_STRUCTURE = (
       >
         <div class="flight-time">
           <p class="fw-bold text-colored">${ticket.start_time}</p>
-          <div class=" flight-duration">
+          <div class="flight-duration pb-1">
             ${ticket.duration}
           </div>
           <p class="fw-bold text-colored">${ticket.finish_time}</p>
