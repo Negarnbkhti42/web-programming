@@ -29,9 +29,18 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <script src="./scripts/utils.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"
+    ></script>
+    <script src="./scripts/utils.js"></script>
     <script src="./scripts/autocomplete.js" defer></script>
     <script src="./scripts/listScript.js" defer></script>
+    <script src="./scripts/datepicker.js" defer></script>
     <title>جست و جوی بلیط</title>
   </head>
   <body>
@@ -63,11 +72,13 @@
 
         <div class="form-floating col-md">
           <input
-            type="date"
+            type="text"
             class="form-control"
             id="date"
             name="date"
             placeholder="تاریخ"
+            data-jdp
+            data-jdp-min-date="today"
           />
           <label for="date">تاریخ</label>
         </div>

@@ -29,6 +29,11 @@ function decreaseCapacity() {
   }
 }
 
+function clearForm(fields, form) {
+  fields.forEach((field) => (field.value = ""));
+  form.classList.remove("was-validated");
+}
+
 function setTicketData() {
   const id = getTicketId();
   const ticket = TICKETS.find((item) => item.id === id);
@@ -79,13 +84,19 @@ form.addEventListener("submit", (event) => {
     let name = event.target.querySelector("#passengerName");
     let passNo = event.target.querySelector("#passportNo");
     passengerListSection.innerHTML += getPassenger(name.value, passNo.value);
-    name.value = "";
-    passNo.value = "";
-    form.classList.remove("was-validated");
+    clearForm([name, passNo], form);
     console.log(event);
 
     decreaseCapacity();
   }
 });
+
+document
+  .querySelector("[data-form-cancel]")
+  .addEventListener("click", (event) => {
+    let name = form.querySelector("#passengerName");
+    let passNo = form.querySelector("#passportNo");
+    clearForm([name, passNo], form);
+  });
 
 setTicketData();
