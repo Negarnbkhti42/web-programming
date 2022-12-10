@@ -23,6 +23,7 @@
     />
     <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./ticket.css" />
+    <link rel="stylesheet" href="./navbar.css" />
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -44,7 +45,19 @@
     <title>جست و جوی بلیط</title>
   </head>
   <body>
-    <nav class="navbar bg-light theme-dependant">
+    <nav class="navbar bg-light mb-3 theme-dependant">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./assets/logo.png" />
+          شاپرک
+        </a>
+        <ul class="nav-items">
+          <li><a href="./login.html">ورود</a></li>
+          <li><a href="./signup.html">ثبت نام </a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="ticket-form theme-dependant">
       <form class="w-100 row g-2" autocomplete="off">
         <div class="form-floating col-md autocomplete">
           <input
@@ -97,7 +110,7 @@
           ویرایش جست و جو
         </button>
       </form>
-    </nav>
+    </section>
     <main
       class="d-flex flex-column align-items-center m-3"
       id="ticketList"

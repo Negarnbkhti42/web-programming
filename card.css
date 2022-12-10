@@ -140,7 +140,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     background-color: #efe4ff;
 }
 
@@ -192,6 +192,10 @@ footer p {
     display: flex;
     flex-direction: row-reverse;
     gap: 5px;
+}
+
+.page-link p {
+    text-align: center;
 }
 
 
@@ -405,7 +409,6 @@ footer p {
         color: black;
     }
 
-    .plans,
     .page-link {
 
         background-color: gray;
