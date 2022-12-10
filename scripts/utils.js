@@ -3,6 +3,8 @@ const DEST_PARAM = "dest";
 const DATE_PARAM = "date";
 const PASSENGER_PARAM = "passenger";
 
+const AUTH_KEY = "logged";
+
 const TICKET_STRUCTURE = (
   ticket
 ) => `<div class="card w-100 mb-2 theme-dependant">
@@ -48,7 +50,11 @@ const TICKET_STRUCTURE = (
   </div>
   <div class="card-footer">
   <div class="p-2">
-  <a href="./checkout.html?id=${ticket.id}" class="btn btn-primary price-badge">
+  <a href="${
+    isLogged()
+      ? `./checkout.html?id=${ticket.id}`
+      : `./login.html?return=${ticket.id}`
+  }" class="btn btn-primary price-badge">
     <span class="badge text-bg-warning">${ticket.class}</span>
     <p>${ticket.price} تومان</p>
   </a>
@@ -1560,4 +1566,16 @@ function filterTickets({ source, dest, classes, date, passengers }) {
   filterTickets = filterTicketsByPassenger(filteredTickets, passengers);
 
   return filteredTickets;
+}
+
+function login() {
+  localStorage.setItem(AUTH_KEY, true);
+}
+
+function logout() {
+  localStorage.removeItem(AUTH_KEY);
+}
+
+function isLogged() {
+  return !!localStorage.getItem(AUTH_KEY);
 }

@@ -50,6 +50,7 @@
         }
       }
     </script>
+    <script src="./scripts/utils.js"></script>
     <title>پنل کاربری</title>
   </head>
   <body>
@@ -86,7 +87,7 @@
         <div class="vstack gap-2">
           <button class="btn btn-outline-primary">عمل ۱</button>
           <button class="btn btn-outline-primary">عمل ۲</button>
-          <a class="btn btn-danger" href="./index.html"
+          <a onclick="logout()" class="btn btn-danger" href="./index.html"
             ><i class="bi bi-box-arrow-right mx-2"></i>خروج</a
           >
         </div>
@@ -123,7 +124,7 @@
         <div class="vstack gap-2">
           <button class="btn btn-outline-primary">عمل ۱</button>
           <button class="btn btn-outline-primary">عمل ۲</button>
-          <a class="btn btn-danger" href="./login.html"
+          <a onclick="logout()" class="btn btn-danger" href="./index.html"
             ><i class="bi bi-box-arrow-right mx-2"></i>خروج</a
           >
         </div>

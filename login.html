@@ -34,6 +34,8 @@
       src="https://kit.fontawesome.com/2c02c3225a.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./scripts/utils.js"></script>
+    <script src="./scripts/authentication.js" defer></script>
     <title>ورود</title>
   </head>
   <body>
@@ -78,7 +80,11 @@
             </label>
           </div>
           <div class="mb-3 vstack gap-2">
-            <a href="user-panel.html" class="btn btn-primary full-width"
+            <a
+              data-auth-route
+              onclick="login()"
+              href="user-panel.html"
+              class="btn btn-primary full-width"
               >ورود</a
             >
             <div class="hstack gap-2">
@@ -115,23 +121,23 @@
       <div class="card-body" style="display: flex; flex-direction: row">
         <form class="col col-3">
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">رایانامه</label>
+            <label for="exampleInputEmail2" class="form-label">رایانامه</label>
             <input
               type="email"
               class="form-control"
-              id="exampleInputEmail1"
+              id="exampleInputEmail2"
               aria-describedby="emailHelp"
             />
             <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
+            <label for="exampleInputPassword2" class="form-label"
               >گذرواژه</label
             >
             <input
               type="password"
               class="form-control"
-              id="exampleInputPassword1"
+              id="exampleInputPassword2"
               style="margin-right: 10pd"
             />
           </div>
@@ -141,7 +147,11 @@
             </label>
           </div>
           <div class="mb-3 vstack gap-2">
-            <a href="user-panel.html" class="btn btn-primary full-width"
+            <a
+              data-auth-route
+              onclick="login()"
+              href="user-panel.html"
+              class="btn btn-primary full-width"
               >ورود</a
             >
             <div class="hstack gap-2">
