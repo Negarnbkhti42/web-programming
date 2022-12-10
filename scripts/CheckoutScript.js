@@ -1,6 +1,9 @@
 const getPassenger = (name, passNo) => `<div class="card theme-dependant mb-2">
 <div class="card-body d-flex justify-content-between">
+<div class="d-flex">
+  <i class=""></i>
   <p>${name}</p>
+</div>
   <p>${passNo}</p>
 </div>
 </div>`;

@@ -26,9 +26,14 @@ function displayTickets(searchParams) {
 
   ticketContainer.innerHTML = "";
 
-  filteredTickets.forEach((ticket) => {
-    ticketContainer.innerHTML += TICKET_STRUCTURE(ticket);
-  });
+  if (filteredTickets.length) {
+    filteredTickets.forEach((ticket) => {
+      ticketContainer.innerHTML += TICKET_STRUCTURE(ticket);
+    });
+  } else {
+    ticketContainer.innerHTML =
+      '<img class="empty-result" src="./assets/emptySearch.svg" alt="not result found" /><p class="h5 mt-3">بلیطی با این مشخصات وجود ندارد!</p>';
+  }
 }
 
 let searchParams = getSearchInfo();

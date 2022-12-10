@@ -172,3 +172,13 @@ input {
 .was-validated .form-control:invalid {
     background-image: none;
 }
+
+.form-check-input:checked {
+    background-color: var(--primary) !important;
+    border-color: var(--primary);
+}
+
+.form-check-input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem hsla(276, 91%, 29%, 0.207);
+}

@@ -1,3 +1,10 @@
+.checkout-page {
+    background-image: url("./assets/ticketSchedule.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed;
+}
+
 .navbar {
     padding: 0.4rem 0.6rem;
 }
@@ -79,6 +86,10 @@
 .flight-capacity {
     display: flex;
     align-items: center;
+}
+
+.empty-result {
+    max-width: 500px;
 }
 
 
