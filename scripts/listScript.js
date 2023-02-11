@@ -36,6 +36,13 @@ function displayTickets(searchParams) {
   }
 }
 
+
+function fetchTicket(){
+
+}
+
+
+
 let searchParams = getSearchInfo();
 setInputs(searchParams);
 displayTickets(searchParams);
