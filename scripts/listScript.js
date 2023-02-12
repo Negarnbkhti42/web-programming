@@ -7,10 +7,12 @@ const passengerInput = document.getElementsByName("passenger")[0];
 function getSearchInfo() {
   let params = new URLSearchParams(document.location.search);
   return {
-    source: params.get(SOURCE_PARAM) || "",
+    origin: params.get(SOURCE_PARAM) || "",
     dest: params.get(DEST_PARAM) || "",
-    date: params.get(DATE_PARAM) || "",
-    passengers: params.get(PASSENGER_PARAM) || 0,
+    departure: params.get(DATE_PARAM) || "",
+    y_class_free_capacity: params.get(PASSENGER_PARAM) || 0,
+    j_class_free_capacity: 0,
+    f_class_free_capacity: 0,
   };
 }
 
@@ -22,26 +24,29 @@ function setInputs(searchParams) {
 }
 
 function displayTickets(searchParams) {
-  const filteredTickets = filterTickets(searchParams);
-
   ticketContainer.innerHTML = "";
-
-  if (filteredTickets.length) {
-    filteredTickets.forEach((ticket) => {
-      ticketContainer.innerHTML += TICKET_STRUCTURE(ticket);
+  fetch("http://localhost:9000", {
+    method: "POST",
+    body: JSON.stringify(searchParams),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.length) {
+        data.forEach((ticket) => {
+          ticketContainer.innerHTML += TICKET_STRUCTURE(ticket);
+        });
+      } else {
+        ticketContainer.innerHTML =
+          '<img class="empty-result" src="./assets/emptySearch.svg" alt="not result found" /><p class="h5 mt-3">بلیطی با این مشخصات وجود ندارد!</p>';
+      }
+    })
+    .catch((err) => {
+      ticketContainer.innerHTML =
+        '<img class="empty-result" src="./assets/emptySearch.svg" alt="not result found" /><p class="h5 mt-3">اتصال به شبکه با خطا مواجه شد!</p>';
     });
-  } else {
-    ticketContainer.innerHTML =
-      '<img class="empty-result" src="./assets/emptySearch.svg" alt="not result found" /><p class="h5 mt-3">بلیطی با این مشخصات وجود ندارد!</p>';
-  }
 }
 
-
-function fetchTicket(){
-
-}
-
-
+function fetchTicket() {}
 
 let searchParams = getSearchInfo();
 setInputs(searchParams);

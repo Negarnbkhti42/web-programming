@@ -59,13 +59,13 @@
       </div>
     </nav>
     <section class="ticket-form theme-dependant">
-      <form class="w-100 row g-2" autocomplete="off" onsubmit=""  >
+      <form class="w-100 row g-2" autocomplete="off" id="ticketForm">
         <div class="form-floating col-md autocomplete">
           <input
             type="text"
             class="form-control"
             id="sourceInput"
-            name="source"
+            name="origin"
             placeholder="مبدا"
           />
           <label for="sourceInput">مبدا</label>
@@ -89,7 +89,7 @@
             type="text"
             class="form-control"
             id="date"
-            name="date"
+            name="departure"
             placeholder="تاریخ"
             data-jdp
             data-jdp-min-date="today"
@@ -102,7 +102,7 @@
             type="number"
             class="form-control"
             id="passenger"
-            name="passenger"
+            name="capacity"
             placeholder="تعداد مسافر"
           />
           <label for="passenger">تعداد مسافر</label>

@@ -9,15 +9,6 @@ const TICKET_STRUCTURE = (
   ticket
 ) => `<div class="card w-100 mb-2 theme-dependant">
   <div class="card-body">
-  <div class="border-bottom d-flex pb-2">
-      <div class="flight-capacity">
-      ظرفیت باقی مانده: ${ticket.flight_capacity} نفر ${
-  ticket.flight_capacity < 3 * searchParams.passengers
-    ? '<span class="badge text-bg-danger ms-2">ظرفیت محدود</span>'
-    : ""
-}
-      </div>
-    </div>
     <div class="ticket-container">
       <div class="flight-airline">
         <img src="${AIRLINE_LOGOS[ticket.airline]}" alt="${
