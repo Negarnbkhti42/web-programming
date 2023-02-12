@@ -75,16 +75,28 @@
       <h4 class="card-title text-center mb-4">ایجاد حساب</h4>
 
       <div class="card-body">
-        <form>
+        <form action="https://localhost:3000" method="post">
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">رایانامه</label>
+            <label for="exampleInputEmail1" class="form-label">نام</label>
             <input
-              type="email"
+              type="text"
+              name="firstName"
               class="form-control"
-              id="exampleInputEmail1"
+              id="exampleInputfirstName"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >نام خانوادگی</label
+            >
+            <input
+              type="text"
+              name="lastName"
+              class="form-control"
+              id="exampleInputLastName"
               aria-describedby="emailHelp"
             />
-            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label"
@@ -92,6 +104,7 @@
             >
             <input
               type="password"
+              name="password"
               class="form-control"
               id="exampleInputPassword1"
               style="margin-right: 10pd"
@@ -110,12 +123,25 @@
           </div>
 
           <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">رایانامه</label>
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+          </div>
+
+          <div class="mb-3">
             <label for="exampleInputPhoneNumber" class="form-label"
               >شماره موبایل</label
             >
             <input
               type="text"
               class="form-control"
+              name="phoneNumber"
               id="exampleInputPhoneNumber"
               style="margin-right: 10pd"
             />
@@ -128,6 +154,7 @@
               <input
                 value="M"
                 type="radio"
+                name="gender"
                 class="form-control"
                 id="genderMale"
                 style="margin-right: 10pd"
@@ -138,6 +165,7 @@
               <input
                 value="F"
                 type="radio"
+                name="gender"
                 class="form-control"
                 id="genderFemale"
                 style="margin-right: 10pd"
@@ -157,10 +185,7 @@
             >
           </div>
           <div class="mb-3 vstack gap-2">
-            <a
-              data-auth-route
-              href="user-panel.html"
-              class="btn btn-primary full-width"
+            <a data-auth-route href="#" class="btn btn-primary full-width"
               >ایجاد حساب</a
             >
             <div class="hstack gap-2">
